@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html class='no-js'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+        <!--==================================================================
+                                Your Title
+        ==================================================================-->
+        <title>OPENGATE API SPECIFICATIONS</title>
+        <link rel="icon" type="image/png" href="img/ico.png" sizes="60x60">
+
+        <!--==================================================================
+                                CSS Stylesheets
+                        ==================================================================-->
+        <link rel='stylesheet' type='text/css'
+              href='bootstrap/css/bootstrap.min.css'>
+        <link rel='stylesheet' type='text/css' href='css/ionicons.min.css'>
+        <link rel='stylesheet' type='text/css' href='css/owl.carousel.css'>
+        <link rel='stylesheet' type='text/css' href='css/magnific-popup.css'>
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+    </head>
+    <body>
+        <!--page-borders-->
+        <div class='page-borders'>
+            <div class='left'></div>
+            <div class='right'></div>
+        </div>
+        <!--==================================================================
+                        Preloader
+                ==================================================================-->
+        <div id='preloader'>
+            <div class='loader'>
+                <img src='img/loader.gif' alt>
+            </div>
+        </div>
+
+        <!--==================================================================
+                        Main Wrapper
+                ==================================================================-->
+        <div id='main-wrapper'>
+
+            <section class='section bg-lightgray'>
+                <div class='container'>
+                    <img src='img/logo.png' alt>
+                </div>
+            </section>
+            <!--==================================================================
+                            Intro Section
+                    ==================================================================-->
+            <section id='download' class='section download-section'
+                     style='background-image: url(img/bg1.jpg);'>
+                <div class='container'>
+                    <div class='row text-center'>
+                        <div class='col-md-8 col-md-offset-2'>
+                            <div class='download-text'>
+                                <h2>LIVE SS-MIDDLEWARE API</h2>
+                                <p>
+                                    <span id="link" style="color: white"></span><span
+                                        style="color: red">EndPoint</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================================================================
+                            Features Section -- 4
+            ======================================================================-->
+            <section id='features-4' class='section features-4-section'>
+                <div class='container'>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Web Services</th>
+                                <th scope="col">End Points</th>
+                                <th scope="col">Available</th>
+                                <th scope="col">Tested</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <tr>
+                                <th scope="row">REQ-000: Authentication</th>
+                                <td><a id="auth"  target="_blank">authentication</a>  </td>
+                                <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-001: Get Repository</th>
+                                <td><a id="gt" target="_blank">getrepository</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-002: Change Card Status</th>
+                                <td><a id="cs" target="_blank">changestatus</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-003: Get Card Status</th>
+                                <td><a id="gcs" target="_blank">changestatus</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-004: Card Opposition & Withdraw</th>
+                                <td><a id="cow" target="_blank">changestatus</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-005: Reset Pin</th>
+                                <td><a id="rp" target="_blank">resetpin</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-006: Replacement</th>
+                                <td><a id="r" target="_blank">replacement</a></td>
+                                <td><img src="img/ok.png" alt=""  style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-007: ReNew</th>
+                                <td><a id="rn" target="_blank">renew</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-008: Card List</th>
+                                <td><a id="cl" target="_blank">cardlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-009: Account List</th>
+                                <td><a id="al" target="_blank">accountlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-010: Customer List</th>
+                                <td><a id="cul" target="_blank">customerlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr onclick="hideshow('.prepaidapplication')">
+                                <th scope="row">REQ-011: Prepaid Application</th>
+                                <td><a target="_blank">prepaidapplication (+)</a></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="prepaidapplication">
+                                <th scope="row">REQ-012: Prepaid Application</th>
+                                <td><a id="pac" target="_blank">CREATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="prepaidapplication">
+                                <th scope="row">REQ-013: Prepaid Application</th>
+                                <td><a id="pau" target="_blank">UPDATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="prepaidapplication">
+                                <th scope="row">REQ-014: Prepaid Application</th>
+                                <td><a id="pad" target="_blank">DELETE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-015: Prepaid Application Validation</th>
+                                <td><a id="pav" target="_blank">prepaidapplicationvalidation</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-0116: Prepaid Application List</th>
+                                <td><a id="pal" target="_blank">prepaidapplicationlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr onclick="hideshow('.debitapplication')">
+                                <th scope="row">REQ-017: Debit Application</th>
+                                <td><a>debitapplication (+)</a></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="debitapplication">
+                                <th scope="row">REQ-018: Debit Application</th>
+                                <td><a id="dac" target="_blank">CREATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="debitapplication">
+                                <th scope="row">REQ-019: Debit Application</th>
+                                <td><a id="dau" target="_blank">UPDATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="debitapplication">
+                                <th scope="row">REQ-020: Debit Application</th>
+                                <td><a id="dad" target="_blank">DELETE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">REQ-021: Debit Application Validation</th>
+                                <td><a id="dav" target="_blank">debitapplicationvalidation</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-022: Debit Application List</th>
+                                <td><a id="dal" target="_blank">debitapplicationlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-023: Redemption</th>
+                                <td><a id="rd" target="_blank">redemption</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-024: Reload</th>
+                                <td><a id="rl" target="_blank">reload</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr onclick="hideshow('.merchantapplication')">
+                                <th scope="row">REQ-005: Merchant Application</th>
+                                <td><a target="_blank">merchantapplication (+)</a></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="merchantapplication">
+                                <th scope="row">REQ-026: Merchant Application</th>
+                                <td><a id="mac" target="_blank">CREATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="merchantapplication">
+                                <th scope="row">REQ-027: Merchant Application</th>
+                                <td><a id="mau" target="_blank">UPDATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="merchantapplication">
+                                <th scope="row">REQ-028: Merchant Application</th>
+                                <td><a id="mad" target="_blank">DELETE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-029: Merchant Update</th>
+                                <td><a id="mu" target="_blank">merchantupdate</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-030: Merchant Application Validation</th>
+                                <td><a id="mav" target="_blank">merchantapplicationvalidation</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-031: Merchant Application List</th>
+                                <td><a id="mal" target="_blank">merchantapplicationlist</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr onclick="hideshow('.posterminalapplication')">
+                                <th scope="row">REQ-032: Pos Terminal Application (Not Available)</th>
+                                <td><a id="pta" target="_blank">posterminalapplication (+)</a></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="posterminalapplication">
+                                <th scope="row">REQ-033: Pos Terminal Application (Not Available)</th>
+                                <td><a id="ptac" target="_blank">CREATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="posterminalapplication">
+                                <th scope="row">REQ-034: Pos Terminal Application (Not Available)</th>
+                                <td><a id="ptau" target="_blank">UPDATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="posterminalapplication">
+                                <th scope="row">REQ-035: Pos Terminal Application (Not Available)</th>
+                                <td><a id="ptad" target="_blank">DELETE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-036: Pos Terminal List (Not Available)</th>
+                                <td><a id="ptl" target="_blank">posterminallist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-037: Pos Application List (Not Available)</th>
+                                <td><a id="posal" target="_blank">posapplicationlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-038: Authorization Inquiry List</th>
+                                <td><a id="ail" target="_blank">authorizationinquirylist</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr onclick="hideshow('.creditapplication')">
+                                <th scope="row">REQ-039: Credit Application (Not Available)</th>
+                                <td><a>creditapplication (+)</a></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="creditapplication">
+                                <th scope="row">REQ-040: Credit Application</th>
+                                <td><a id="cac" target="_blank">CREATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="creditapplication">
+                                <th scope="row">REQ-041: Credit Application</th>
+                                <td><a id="cau" target="_blank">UPDATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="creditapplication">
+                                <th scope="row">REQ-042: Credit Application</th>
+                                <td><a id="cad" target="_blank">DELETE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-043: Credit Application Validation</th>
+                                <td><a id="cav" target="_blank">creditapplicationvalidation</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-044: Credit Application List</th>
+                                <td><a id="cal" target="_blank">creditapplicationlist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-045: Update Mobile</th>
+                                <td><a id="um" target="_blank">updateMobile</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-046: Update Account</th>
+                                <td><a id="ua" target="_blank">updateAccount</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-047: Update Merchant Status</th>
+                                <td><a id="ums" target="_blank">updateMerchantStatus</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-048: Interface List</th>
+                                <td><a id="il" target="_blank">Interfacelist</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-049: Internet Mail Order Status</th>
+                                <td><a id="imos" target="_blank">InternetMailOrderStatus</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-050: Anonymous PrepaidCard</th>
+                                <td><a id="app" target="_blank">AnonymousPrepaidCard</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-051: Change Commission Merchant</th>
+                                <td><a id="mcu" target="_blank">ChangeCommissionMerchant</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr onclick="hideshow('.manageaddress')">
+                                <th scope="row">REQ-052: Manage Address</th>
+                                <td><a>Manage Address (+)</a></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/plus.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="manageaddress">
+                                <th scope="row">REQ-053: Manage Address</th>
+                                <td><a id="maa" target="_blank">ADD</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr class="manageaddress">
+                                <th scope="row">REQ-054: Manage Address</th>
+                                <td><a id="maup" target="_blank">UPDATE</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-055: Update Risk Card</th>
+                                <td><a id="urcard" target="_blank">UpdateRiskCard</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-056: Anonymous DebitCard (Not Available)</th>
+                                <td><a id="appcredit" target="_blank">AnonymousDebitCard</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-057: Get Balance</th>
+                                <td><a id="bl" target="_blank">getbalance</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-058: Get Merchant Terminals</th>
+                                <td><a id="mts" target="_blank">getMerchantTerminals</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-059: Get Merchant Transactions</th>
+                                <td><a id="mtrs" target="_blank">getMerchantTransactions</a>
+                                </td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-060: Get Merchant Terminal Transactions</th>
+                                <td><a id="mtttrs" target="_blank">getMerchantTerminalTransactions</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-061: Get Transactions</th>
+                                <td><a id="tl2" target="_blank">gettransactions</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-062: Get Card Risk</th>
+                                <td><a id="crk" target="_blank">getcardrisk</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-063: Pos Monitoring</th>
+                                <td><a id="pmo" target="_blank">posmonitoring</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-064: Send Pins By Sms</th>
+                                <td><a id="pbs" target="_blank">sendpinbysms</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-065: Ping Server</th>
+                                <td><a id="pg" target="_blank">pingserver</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-066: Program Risk</th>
+                                <td><a id="pr" target="_blank">programrisk</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt=""  style="width: 30px; height: 30px;"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">REQ-067: Transaction Status</th>
+                                <td><a id="transtatus" target="_blank">transactionstatus</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-068 : SMS Notification</th>
+                                <td><a id="sendsmsalert" target="_blank">SmsAlert</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt=""
+                                         style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-069 : PIN by Email</th>
+                                <td><a id="sendpinbyemail" target="_blank">PinByEmail</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt=""
+                                         style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-070 : ATM Monitoring</th>
+                                <td><a id="atmmonitoring" target="_blank">ATMMonitoring</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-071 : Virtual Card</th>
+                                <td><a id="virtualcard" target="_blank">virtualcardcreation</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">REQ-072 : Validate PIN</th>
+                                <td><a id="validatepin" target="_blank">validatecardpin</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr> 
+                            
+                            <tr>
+                                <th scope="row">REQ-073 : notify</th>
+                                <td><a id="notify" target="_blank">notify</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REQ-074 : Get card print data</th>
+                                <td><a id="getData" target="_blank">Get data</a></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                                <td><img src="img/ok.png" alt="" style="width: 30px; height: 30px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                            Footer
+                    ==================================================================-->
+            <footer>
+                <div class='container text-center'>
+                    <p>
+                        Copyright S2M &copy; 2020. <a href="http://s2mworldwide.com"
+                                                      target="_blank">s2mworldwide</a>
+                    </p>
+                </div>
+            </footer>
+
+        </div>
+
+        <!--
+                                                <tr>
+                                                  <th scope="row">REQ-052: Add ChargeBack</th>
+                                                  <td><a id="acb"  target="_blank">AddChargeBack</a>  </td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th scope="row">REQ-053: Purchase Auth</th>
+                                                  <td><a id="pa"  target="_blank">PurchaseAuth</a>  </td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th scope="row">REQ-054: Auth Reversal </th>
+                                                  <td><a id="ar"  target="_blank">AuthReversal</a>  </td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th scope="row">REQ-055: Purchase Advice </th>
+                                                  <td><a id="padvice"  target="_blank">PurchaseAdvice</a>  </td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                  <td><img src="img/ok.png" alt="" style="width:30px;height:30px;"></td>
+                                                </tr>
+        -->
+        <!--==================================================================
+                        JavaScript Files
+                ==================================================================-->
+        <script src='js/jquery.min.js'></script>
+        <script src='js/jquery.fitvids.js'></script>
+        <script src='js/owl.carousel.min.js'></script>
+        <script src='js/jquery.magnific-popup.min.js'></script>
+        <script src='js/validator.min.js'></script>
+        <script src='js/script.js'></script>
+        <script src='js/masarat.js'></script>
+        <script>
+
+                                var divsToHide = document.getElementsByClassName("debitapplication");
+                                for (var i = 0; i < divsToHide.length; i++) {
+                                    divsToHide[i].style.display = "none";
+                                }
+
+                                var divsToHide = document.getElementsByClassName("creditapplication");
+                                for (var i = 0; i < divsToHide.length; i++) {
+                                    divsToHide[i].style.display = "none";
+                                }
+
+                                var divsToHide = document.getElementsByClassName("manageaddress");
+                                for (var i = 0; i < divsToHide.length; i++) {
+                                    divsToHide[i].style.display = "none";
+                                }
+
+                                var divsToHide = document.getElementsByClassName("prepaidapplication");
+                                for (var i = 0; i < divsToHide.length; i++) {
+                                    divsToHide[i].style.display = "none";
+                                }
+
+                                var divsToHide = document.getElementsByClassName("merchantapplication"); //divsToHide is an array
+                                for (var i = 0; i < divsToHide.length; i++) {
+                                    divsToHide[i].style.display = "none"; // depending on what you're doing
+                                }
+
+                                var divsToHide = document.getElementsByClassName("posterminalapplication"); //divsToHide is an array                                 
+                                for (var i = 0; i < divsToHide.length; i++) {
+                                    divsToHide[i].style.display = "none";
+                                }
+
+                                var link = window.location.href + 'api/lib/';
+                                document.getElementById("link").innerHTML = link;
+
+                                document.getElementById("auth").setAttribute("href", 'Authentication.html?link=' + link + 'authentication');
+                                document.getElementById("gt").setAttribute("href", 'GetRepository.html?link=' + link + 'getrepository');
+
+                                document.getElementById("cs").setAttribute("href", 'ChangeStatus.html?link=' + link + 'changestatus');
+                                document.getElementById("gcs").setAttribute("href", 'GetCardStatus.html?link=' + link + 'changestatus');
+                                document.getElementById("cow").setAttribute("href", 'CardOppositionWithdraw.html?link=' + link + 'changestatus');
+
+                                document.getElementById("rp").setAttribute("href", 'ResetPin.html?link=' + link + 'resetpin');
+                                document.getElementById("r").setAttribute("href", 'Replacement.html?link=' + link + 'replacement');
+
+                                document.getElementById("rn").setAttribute("href", 'ReNew.html?link=' + link + 'renew');
+                                document.getElementById("cl").setAttribute("href", 'CardList.html?link=' + link + 'cardlist');
+                                document.getElementById("al").setAttribute("href", 'AccountList.html?link=' + link + 'accountlist');
+                                document.getElementById("cul").setAttribute("href", 'CustomerList.html?link=' + link + 'customerlist');
+
+                                document.getElementById("pac").setAttribute("href", 'PrepaidApplicationCreate.html?link=' + link + 'prepaidapplication');
+                                document.getElementById("pau").setAttribute("href", 'PrepaidApplicationUpdate.html?link=' + link + 'prepaidapplication');
+                                document.getElementById("pad").setAttribute("href", 'PrepaidApplicationDelete.html?link=' + link + 'prepaidapplication');
+
+
+                                document.getElementById("pav").setAttribute("href", 'PrepaidApplicationValidation.html?link=' + link + 'prepaidapplicationvalidation');
+                                document.getElementById("pal").setAttribute("href", 'PrepaidApplicationList.html?link=' + link + 'prepaidapplicationlist');
+
+                                document.getElementById("dac").setAttribute("href", 'DebitApplicationCreate.html?link=' + link + 'debitapplication');
+                                document.getElementById("dau").setAttribute("href", 'DebitApplicationUpdate.html?link=' + link + 'debitapplication');
+                                document.getElementById("dad").setAttribute("href", 'DebitApplicationDelete.html?link=' + link + 'debitapplication');
+
+                                document.getElementById("dav").setAttribute("href", 'DebitApplicationValidation.html?link=' + link + 'debitapplicationvalidation');
+                                document.getElementById("dal").setAttribute("href", 'DebitApplicationList.html?link=' + link + 'debitapplicationlist');
+                                document.getElementById("rd").setAttribute("href", 'Redemption.html?link=' + link + 'redemption');
+                                document.getElementById("rl").setAttribute("href", 'Reload.html?link=' + link + 'reload');
+
+                                document.getElementById("mac").setAttribute("href", 'MerchantApplicationCreate.html?link=' + link + 'merchantapplication');
+                                document.getElementById("mau").setAttribute("href", 'MerchantApplicationUpdate.html?link=' + link + 'merchantapplicationupdate');
+                                document.getElementById("mad").setAttribute("href", 'MerchantApplicationDelete.html?link=' + link + 'merchantapplication');
+
+                                document.getElementById("mu").setAttribute("href", 'MerchantUpdate.html?link=' + link + 'merchantupdate');
+
+                                document.getElementById("mav").setAttribute("href", 'MerchantApplicationValidation.html?link=' + link + 'merchantapplicationvalidation');
+                                document.getElementById("mal").setAttribute("href", 'MerchantApplicationList.html?link=' + link + 'merchantapplicationlist');
+
+                                document.getElementById("ptac").setAttribute("href", 'PosTerminalApplicationCreate.html?link=' + link + 'posterminalapplication');
+                                document.getElementById("ptau").setAttribute("href", 'PosTerminalApplicationUpdate.html?link=' + link + 'posterminalapplication');
+                                document.getElementById("ptad").setAttribute("href", 'PosTerminalApplicationDelete.html?link=' + link + 'posterminalapplication');
+
+                                document.getElementById("ptl").setAttribute("href", 'PosTerminalList.html?link=' + link + 'posterminallist');
+                                document.getElementById("posal").setAttribute("href", 'PosApplicationList.html?link=' + link + 'posapplicationlist');
+                                document.getElementById("ail").setAttribute("href", 'AuthorizationInquiryList.html?link=' + link + 'authorizationinquirylist');
+                                document.getElementById("bl").setAttribute("href", 'Balance.html?link=' + link + 'getbalance');
+                                document.getElementById("tl2").setAttribute("href", 'Transactions List.html?link=' + link + 'gettransactions');
+                                document.getElementById("pg").setAttribute("href", 'Ping Server.html?link=' + link + 'pingserver');
+                                document.getElementById("mts").setAttribute("href", 'MerchantTerminals.html?link=' + link + 'terminalsbymerchant');
+                                document.getElementById("mtrs").setAttribute("href", 'MerchantTransactions.html?link=' + link + 'merchanttransactions');
+                                document.getElementById("mtttrs").setAttribute("href", 'MerchantTerminalTransactions.html?link=' + link + 'merchantterminaltransactions');
+                                document.getElementById("crk").setAttribute("href", 'cardRisk.html?link=' + link + 'cardrisk');
+                                document.getElementById("pmo").setAttribute("href", 'PosMonitoring.html?link=' + link + 'posmonitoring');
+                                document.getElementById("pbs").setAttribute("href", 'PinBySms.html?link=' + link + 'sendpinbysms');
+
+                                document.getElementById("cac").setAttribute("href", 'CreditApplicationCreate.html?link=' + link + 'creditapplication');
+                                document.getElementById("cau").setAttribute("href", 'CreditApplicationUpdate.html?link=' + link + 'creditapplication');
+                                document.getElementById("cad").setAttribute("href", 'CreditApplicationDelete.html?link=' + link + 'creditapplication');
+                                document.getElementById("cav").setAttribute("href", 'CreditApplicationValidation.html?link=' + link + 'creditapplicationvalidation');
+                                document.getElementById("cal").setAttribute("href", 'CreditApplicationList.html?link=' + link + 'creditapplicationlist');
+
+
+                                document.getElementById("um").setAttribute("href", 'UpdateMobile.html?link=' + link + 'updatemobile');
+                                document.getElementById("ua").setAttribute("href", 'UpdateAccount.html?link=' + link + 'updateaccount');
+                                document.getElementById("ums").setAttribute("href", 'UpdateMerchantStatus.html?link=' + link + 'updatemerchantstatus');
+                                document.getElementById("il").setAttribute("href", 'InterfaceList.html?link=' + link + 'interfacelist');
+                                document.getElementById("imos").setAttribute("href", 'InternetMailOrderStatus.html?link=' + link + 'internetmailorderstatus');
+                                document.getElementById("app").setAttribute("href", 'AnonymousPrepaidCard.html?link=' + link + 'anonymprepaidcard');
+                                document.getElementById("mcu").setAttribute("href", 'ChangeCommissionMerchant.html?link=' + link + 'changecommissionmerchant');
+
+                                document.getElementById("maa").setAttribute("href", 'ManageAddressAdd.html?link=' + link + 'manageaddress');
+                                document.getElementById("maup").setAttribute("href", 'ManageAddressUpdate.html?link=' + link + 'manageaddress');
+
+                                document.getElementById("urcard").setAttribute("href", 'UpdateRiskCard.html?link=' + link + 'updaterisknew');
+
+                                document.getElementById("appcredit").setAttribute("href", 'AnonymousDebitCard.html?link=' + link + 'anonymdebitcard');
+                                document.getElementById("pr").setAttribute("href", 'ProgramRisk.html?link=' + link + 'programrisk');
+                                document.getElementById("transtatus").setAttribute("href", 'TransactionStauts.html?link=' + link + 'transtatus');
+                                document.getElementById("sendsmsalert").setAttribute("href", 'smsAlert.html?link=' + link + 'sendsmsalert');
+                                document.getElementById("sendpinbyemail").setAttribute("href", 'PinByEmail.html?link=' + link + 'sendpinbyemail');
+                                document.getElementById("atmmonitoring").setAttribute("href", 'AtmMonitoring.html?link=' + link + 'atmmonitoring');
+                                document.getElementById("virtualcard").setAttribute("href", 'virtualcardcreation.html?link=' + link + 'virtualcardcreation');
+                                document.getElementById("validatepin").setAttribute("href", 'validatecardpin.html?link=' + link + 'validatecardpin');
+                                document.getElementById("notify").setAttribute("href", 'notify.html?link=' + link + 'notify');
+                                document.getElementById("getData").setAttribute("href", 'CardPrintData.html?link=' + link + 'getData');
+
+                                function hideshow(which) {
+
+                                    var elems = document.querySelectorAll(which);
+
+                                    [].slice.call(elems).forEach(function (el) {
+                                        if (el.style.display === 'none') {
+                                            el.style.display = '';
+                                        } else {
+                                            el.style.display = 'none';
+                                        }
+                                    });
+                                }
+        </script>
+    </body>
+</html>

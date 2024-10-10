@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class='no-js' >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+        <!--==================================================================
+                Your Title
+        ==================================================================-->
+        <title>OPENGATE API SPECIFICATIONS</title>
+        <link rel="icon" type="image/png" href="img/ico.png" sizes="60x60">
+
+        <!--==================================================================
+                CSS Stylesheets
+        ==================================================================-->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+        <link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
+        <link rel='stylesheet' type='text/css' href='css/style.css' >
+
+    </head>
+    <body>
+        <!--page-borders-->
+        <div class='page-borders' >
+            <div class='left' ></div>
+            <div class='right' ></div>
+        </div>
+
+
+        <!--==================================================================
+                Preloader
+        ==================================================================-->
+        <div id='preloader' >
+            <div class='loader' >
+                <img src='img/loader.gif' alt>
+            </div>
+        </div>
+
+        <!--==================================================================
+                Main Wrapper
+        ==================================================================-->
+        <div id='main-wrapper' >
+
+            <section class='section bg-lightgray' >
+                <div class='container' >
+                    <img src='img/logo.png' alt>
+                </div>
+            </section>
+            <!--==================================================================
+                    Intro Section
+            ==================================================================-->
+            <section id='clients' class='section clients-section bg-lightgray' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>Customer Info</h2>
+                        <p>Get Customer Data (check customer existing)</p>
+                    </div>
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Parameter</th>
+                                <th scope="col">Constraints</th>
+                                <th scope="col">Precision</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;" rowspan="2" scope="row">INPUT</th>
+                                <td>header</td>
+                                <td>object, Not Null</td>
+                                <td>Header object</td>
+                            </tr>
+                            <tr>
+                                <td>criteria</td>
+                                <td>object, Not Null</td>
+                                <td>Criteria object </td>
+                            </tr>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;" rowspan="3" scope="row">OUTPUT</th>
+                                <td>header</td>
+                                <td>object, Not Null</td>
+                                <td>Header object</td>
+                            </tr>
+                            <tr>
+                                <td>customer</td>
+                                <td>object</td>
+                                <td>Customer object </td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>object, Not Null</td>
+                                <td>Status object </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                    Features Section -- 4
+            ==================================================================-->
+            <section id='faq' class='section faq-section' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>getcustomerinfo</h2>
+                        <p>POST ==><span id="link"></span></p>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>HEADER:Content-Type >> application/json</h4>
+                            <h4>Body</h4>
+                            <p>
+
+                            <pre>
+{
+    "header": {
+        "idmsg":"CI0000000103",
+        "mac":"1988b1d209166926"
+    },
+    "criteria": {
+        "nationalid":"4554899",
+        "bankcode":"8671"  
+    }
+}
+							</p>
+						</div>
+					</div>
+                                    <div class='col-md-6' >
+						<div class='faq' >
+							<h4>RESPONSE  (Content-Type >> application/json)</h4>
+							<h4>Body</h4>
+							<p>
+							
+							<pre>
+{
+    "customer": {
+        "address": [
+            {
+                "addcorr": "01",
+                "addr1": "NB fath  12",
+                "addrtype": "01",
+                "addstreet": "st abd mourad",
+                "addzipd": "5589",
+                "citycode": "125",
+                "country": "874"
+            }
+        ],
+        "bankcode": "8671",
+        "branchcode": "99999",
+        "customercode": "5941241",
+        "dateob": "1990-11-03",
+        "email": "n.houda@gmail.com",
+        "enfirstname": "NOUR",
+        "enlastname": "HOUDA",
+        "gender": "F",
+        "mobile": "0021812555755",
+        "nationalid": "4554899",
+        "nationality": "874",
+        "passportexpiration": "2024-02-03",
+        "passportnumber": "TF225699",
+        "title": "1"
+    },
+    "header": {
+        "idmsg": "CI0000000103",
+        "mac": "F7AA42DB970B72BE"
+    },
+    "status": {
+        "codeerror": "",
+        "codestatus": "0",
+        "descstatus": "Approved",
+        "msgerror": ""
+    }
+}
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<!--==================================================================
+				Footer
+			==================================================================-->
+			<footer>
+				<div class='container text-center' >
+					<p>Copyright S2M &copy; 2019. <a href="http://s2mworldwide.com" target="_blank">s2mworldwide</a></p>
+				</div>
+			</footer>
+			
+		</div>
+		
+		
+		<!--==================================================================
+			JavaScript Files
+		==================================================================-->
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.fitvids.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/script.js' ></script>
+		<script src='js/masarat.js' ></script>
+		<script>
+            document.getElementById("link").innerHTML = gup('link', window.location.href);
+</script>
+	</body>
+</html>

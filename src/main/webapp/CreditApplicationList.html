@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html class='no-js' >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+        <!--==================================================================
+                Your Title
+        ==================================================================-->
+        <title>OPENGATE API SPECIFICATIONS</title>
+        <link rel="icon" type="image/png" href="img/ico.png" sizes="60x60">
+
+        <!--==================================================================
+                CSS Stylesheets
+        ==================================================================-->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+        <link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
+        <link rel='stylesheet' type='text/css' href='css/style.css' >
+
+    </head>
+    <body>
+        <!--page-borders-->
+        <div class='page-borders' >
+            <div class='left' ></div>
+            <div class='right' ></div>
+        </div>
+
+
+        <!--==================================================================
+                Preloader
+        ==================================================================-->
+        <div id='preloader' >
+            <div class='loader' >
+                <img src='img/loader.gif' alt>
+            </div>
+        </div>
+
+        <!--==================================================================
+                Main Wrapper
+        ==================================================================-->
+        <div id='main-wrapper' >
+
+            <section class='section bg-lightgray' >
+                <div class='container' >
+                    <img src='img/logo.png' alt>
+                </div>
+            </section>
+            <!--==================================================================
+                    Intro Section
+            ==================================================================-->
+            <section id='clients' class='section clients-section bg-lightgray' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>Credit Application List</h2>
+                        <p>Credit Application List</p>
+                    </div>
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Parameter</th>
+                                <th scope="col">Constraints</th>
+                                <th scope="col">Precision</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;" rowspan="2" scope="row">INPUT</th>
+                                <td>header</td>
+                                <td>object, Not Null</td>
+                                <td>Header object</td>
+                            </tr>
+                            <tr>
+                                <td>initiator</td>
+                                <td>object, Not Null</td>
+                                <td>Initiator object</td>
+                            </tr>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;" rowspan="3" scope="row">OUTPUT</th>
+                                <td>header</td>
+                                <td>object, Not Null</td>
+                                <td>Header object</td>
+                            </tr>
+                            <tr>
+                                <td>application</td>
+                                <td>object</td>
+                                <td>Application object </td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>object, Not Null</td>
+                                <td>Status object </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                    Features Section -- 4
+            ==================================================================-->
+            <section id='faq' class='section faq-section' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>creditapplicationlist</h2>
+                        <p>POST ==><span id="link"></span></p>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>HEADER:Content-Type >> application/json</h4>
+                            <h4>Body</h4>
+                            <p>
+
+                            <pre>
+{
+    "header": {
+        "idmsg":"000000000104",
+        "mac":"bcecfa664e12edca"
+    },
+    "filter": {
+    "customerid": "", 
+    "applicationid": "",
+    "branchcode": "13341",
+    "bankcode": "1",
+    "start":"1",
+    "end": "3"
+    }
+ }
+                            </pre>
+                        </div>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>RESPONSE  (Content-Type >> application/json)</h4>
+                            <h4>Body</h4>
+                            <p>
+
+                            <pre>
+{
+    "header": {
+        "idmsg": "000000000104",
+        "mac": "11087E637DA848CA"
+    },
+    "body": {
+        "applications": [
+            {
+                "applicationcode": 24800,
+                "applicationid": "5100000001D0024800",
+                "creationdate": "26/04/2021 17:41:50",
+                "state": 1,
+                "changedate": "26/04/2021 17:41:50",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000295",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS1020301020916",
+                "accountnumber": "ACC1020301020916",
+                "currencycode": 2,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24799,
+                "applicationid": "5100000001D0024799",
+                "creationdate": "26/04/2021 17:38:48",
+                "state": 1,
+                "changedate": "26/04/2021 17:38:48",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000287",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS1020301020915",
+                "accountnumber": "ACC1020301020915",
+                "currencycode": 705,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24798,
+                "applicationid": "5100000001D0024798",
+                "creationdate": "26/04/2021 17:36:04",
+                "state": 1,
+                "changedate": "26/04/2021 17:36:04",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000279",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS1020301020914",
+                "accountnumber": "ACC1020301020914",
+                "currencycode": null,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24797,
+                "applicationid": "5100000001D0024797",
+                "creationdate": "26/04/2021 16:49:27",
+                "state": 1,
+                "changedate": "26/04/2021 16:49:27",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000261",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS1020301020913",
+                "accountnumber": "ACC1020301020913",
+                "currencycode": null,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24796,
+                "applicationid": "5100000001D0024796",
+                "creationdate": "26/04/2021 16:22:54",
+                "state": 1,
+                "changedate": "26/04/2021 16:22:54",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000253",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS1020301020911",
+                "accountnumber": "ACC1020301020911",
+                "currencycode": null,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24795,
+                "applicationid": "5100000001D0024795",
+                "creationdate": "26/04/2021 16:12:15",
+                "state": 1,
+                "changedate": "26/04/2021 16:12:15",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000246",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "023659",
+                "accountnumber": "ACC102030102099",
+                "currencycode": null,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24794,
+                "applicationid": "5100000001D0024794",
+                "creationdate": "26/04/2021 15:53:55",
+                "state": 3,
+                "changedate": "26/04/2021 15:54:34",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": "2021-04-26T15:54:34",
+                "changedby": "OPG",
+                "cardprogram": 8881,
+                "pan": "4411250000000238",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS102030102099",
+                "accountnumber": "ACC102030102099",
+                "currencycode": null,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24793,
+                "applicationid": "5100000001D0024793",
+                "creationdate": "26/04/2021 15:05:30",
+                "state": 1,
+                "changedate": "26/04/2021 15:05:30",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "chama",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000220",
+                "nameonecard": "CREDIT CARD Chaimaa",
+                "persofee": null,
+                "customerid": "CUS102030102098",
+                "accountnumber": "ACC102030102098",
+                "currencycode": null,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24775,
+                "applicationid": "5100000001D0024775",
+                "creationdate": "23/04/2021 23:40:52",
+                "state": 1,
+                "changedate": "23/04/2021 23:40:52",
+                "firstname": "HASNAA",
+                "lastname": "ZAID",
+                "middlename": "ZAID",
+                "birthdate": null,
+                "nationalid": "BH356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000212",
+                "nameonecard": "CREDIT CARD HASNAA",
+                "persofee": null,
+                "customerid": "CUS102030102097",
+                "accountnumber": "ACC102030102097",
+                "currencycode": 76,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24774,
+                "applicationid": "5100000001D0024774",
+                "creationdate": "28/04/2021 15:50:00",
+                "state": 1,
+                "changedate": "28/04/2021 15:50:00",
+                "firstname": "chaimaa",
+                "lastname": "belabbes",
+                "middlename": "belatarchi",
+                "birthdate": null,
+                "nationalid": "BE356170",
+                "nationalidtype": 1,
+                "decisiondate": "2021-04-26T14:55:57",
+                "changedby": "OPG",
+                "cardprogram": 8881,
+                "pan": "4411250000000204",
+                "nameonecard": "CREDIT CARD ",
+                "persofee": null,
+                "customerid": "CUS102030102080",
+                "accountnumber": "ACC102030102080",
+                "currencycode": 132,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24773,
+                "applicationid": "5100000001D0024773",
+                "creationdate": "23/04/2021 15:06:23",
+                "state": 2,
+                "changedate": "23/04/2021 16:54:55",
+                "firstname": "HASNAA",
+                "lastname": "ZAID",
+                "middlename": "ZAID",
+                "birthdate": null,
+                "nationalid": "BH356170",
+                "nationalidtype": 1,
+                "decisiondate": "2021-04-23T16:54:55",
+                "changedby": "OPG",
+                "cardprogram": 8881,
+                "pan": "4411250000000196",
+                "nameonecard": "CREDIT CARD HASNAA",
+                "persofee": null,
+                "customerid": "CUS102030102091",
+                "accountnumber": "ACC102030102091",
+                "currencycode": 76,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24756,
+                "applicationid": "5100000001D0024756",
+                "creationdate": "15/04/2021 14:45:00",
+                "state": 1,
+                "changedate": "15/04/2021 14:45:00",
+                "firstname": "HASNAA",
+                "lastname": "ZAID",
+                "middlename": "ZAID",
+                "birthdate": null,
+                "nationalid": "BH356170",
+                "nationalidtype": 1,
+                "decisiondate": null,
+                "changedby": null,
+                "cardprogram": 8881,
+                "pan": "4411250000000188",
+                "nameonecard": "CREDIT CARD HASNAA",
+                "persofee": null,
+                "customerid": "CUS102030102095",
+                "accountnumber": "ACC102030102095",
+                "currencycode": 76,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24713,
+                "applicationid": "51000001CA0024702",
+                "creationdate": "15/04/2021 12:52:06",
+                "state": 4,
+                "changedate": "15/04/2021 13:58:56",
+                "firstname": "HASNAA",
+                "lastname": "ZAID",
+                "middlename": "ZAID",
+                "birthdate": null,
+                "nationalid": "BH356170",
+                "nationalidtype": 1,
+                "decisiondate": "2021-04-15T13:58:56",
+                "changedby": "OPG",
+                "cardprogram": 8881,
+                "pan": "5324420000000396",
+                "nameonecard": "CREDIT CARD HASNAA",
+                "persofee": null,
+                "customerid": "CUS102030102080",
+                "accountnumber": "ACC102030102080",
+                "currencycode": 76,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24701,
+                "applicationid": "51000001CA0024701",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 2,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 8081,
+                "pan": "5489390000000202",
+                "nameonecard": "TEST FBNBANK",
+                "persofee": null,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24700,
+                "applicationid": "51000001CA0024700",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 4,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 8061,
+                "pan": "5448760000000198",
+                "nameonecard": "TEST FBNBANK",
+                "persofee": null,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24699,
+                "applicationid": "51000001CA0024699",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 4,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 7661,
+                "pan": "5324420000000388",
+                "nameonecard": "TEST FBNBANK",
+                "persofee": 401,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24698,
+                "applicationid": "51000001CA0024698",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 4,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 8081,
+                "pan": "5489390000000194",
+                "nameonecard": "TEST BCBC",
+                "persofee": null,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24697,
+                "applicationid": "51000001CA0024697",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 4,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 8061,
+                "pan": "5448760000000180",
+                "nameonecard": "TEST BCDC",
+                "persofee": null,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24696,
+                "applicationid": "51000001CA0024696",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 4,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 7661,
+                "pan": "5324420000000370",
+                "nameonecard": "TEST BCDC",
+                "persofee": 401,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            },
+            {
+                "applicationcode": 24695,
+                "applicationid": "51000001CA0024695",
+                "creationdate": "28/09/2020 00:00:00",
+                "state": 4,
+                "changedate": "28/09/2020 00:00:00",
+                "firstname": "SALIM",
+                "lastname": "SHAH SALMAN",
+                "middlename": null,
+                "birthdate": null,
+                "nationalid": "M0802697",
+                "nationalidtype": 1,
+                "decisiondate": "2020-09-28T13:17:31",
+                "changedby": "SUSHMA",
+                "cardprogram": 8081,
+                "pan": "5489390000000186",
+                "nameonecard": "TEST EQUITY BANK",
+                "persofee": null,
+                "customerid": "399346",
+                "accountnumber": "0510100139934602",
+                "currencycode": 28,
+                "branchcode": 13341,
+                "bank": 1
+            }
+        ],
+        "status": {
+            "errorcode": "000",
+            "errordesc": "SUCCESS"
+        }
+    }
+}	</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                    Footer
+            ==================================================================-->
+            <footer>
+                <div class='container text-center' >
+                    <p>Copyright S2M &copy; 2020. <a href="http://s2mworldwide.com" target="_blank">s2mworldwide</a></p>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <!--==================================================================
+                JavaScript Files
+        ==================================================================-->
+        <script src='js/jquery.min.js' ></script>
+        <script src='js/jquery.fitvids.js' ></script>
+        <script src='js/owl.carousel.min.js' ></script>
+        <script src='js/jquery.magnific-popup.min.js' ></script>
+        <script src='js/validator.min.js' ></script>
+        <script src='js/script.js' ></script>
+        <script src='js/masarat.js' ></script>
+        <script>
+            document.getElementById("link").innerHTML = gup('link', window.location.href);
+        </script>
+    </body>
+</html>

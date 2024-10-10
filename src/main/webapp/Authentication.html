@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class='no-js' >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+        <!--==================================================================
+                Your Title
+        ==================================================================-->
+        <title>OPENGATE API</title>
+        <link rel="icon" type="image/png" href="img/ico.png" sizes="60x60">
+
+        <!--==================================================================
+                CSS Stylesheets
+        ==================================================================-->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+        <link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
+        <link rel='stylesheet' type='text/css' href='css/style.css' >
+
+    </head>
+    <body>
+        <!--page-borders-->
+        <div class='page-borders' >
+            <div class='left' ></div>
+            <div class='right' ></div>
+        </div>
+
+
+        <!--==================================================================
+                Preloader
+        ==================================================================-->
+        <div id='preloader' >
+            <div class='loader' >
+                <img src='img/loader.gif' alt>
+            </div>
+        </div>
+
+        <!--==================================================================
+                Main Wrapper
+        ==================================================================-->
+        <div id='main-wrapper' >
+
+            <section class='section bg-lightgray' >
+                <div class='container' >
+                    <img src='img/logo.png' alt>
+                </div>
+            </section>
+            <!--==================================================================
+                    Intro Section
+            ==================================================================-->
+
+
+            <!--==================================================================
+                    Features Section -- 4
+            ==================================================================-->
+            <section id='faq' class='section faq-section' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>API Authentication</h2>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>Header simple</h4>
+                            <p>
+
+                            <pre>
+In the authentication we Have two values :
+    "header": {
+        "idmsg":"000000000001",
+        "mac":"0892a82d7171ce92"
+    }
+                            </pre>
+                        </div>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>STEPS</h4>
+                            <p>
+
+                            <pre>
+Step 1	
+IDMSG is a random number must be generated from the system 
+Result : 000000000001
+
+Step 2
+Concatenate it with the key : 142DF54EF47ZE78B
+Result : 000000000001142DF54EF47ZE78B
+
+Step 3
+Calculate SHA-256 hash of the above
+Result : 0892a82d7171ce92483295fe52afc0f95d2aa62bb34ed6e2121d94659bf00a3c
+https://xorbin.com/tools/sha256-hash-calculator
+
+Step 4
+MAC : The first 16 digits of the result above 
+Result : 0892a82d7171ce92
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                    Footer
+            ==================================================================-->
+            <footer>
+                <div class='container text-center' >
+                    <p>Copyright S2M &copy; 2020. <a href="http://s2mworldwide.com" target="_blank">s2mworldwide</a></p>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <!--==================================================================
+                JavaScript Files
+        ==================================================================-->
+        <script src='js/jquery.min.js' ></script>
+        <script src='js/jquery.fitvids.js' ></script>
+        <script src='js/owl.carousel.min.js' ></script>
+        <script src='js/jquery.magnific-popup.min.js' ></script>
+        <script src='js/validator.min.js' ></script>
+        <script src='js/script.js' ></script>
+        <script src='js/masarat.js' ></script>
+        <script>
+            document.getElementById("link").innerHTML = gup('link', window.location.href);
+        </script>
+    </body>
+</html>

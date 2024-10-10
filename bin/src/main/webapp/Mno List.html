@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class='no-js' >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+        <!--==================================================================
+                Your Title
+        ==================================================================-->
+        <title>OPENGATE API SPECIFICATIONS</title>
+        <link rel="icon" type="image/png" href="img/ico.png" sizes="60x60">
+
+        <!--==================================================================
+                CSS Stylesheets
+        ==================================================================-->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+        <link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
+        <link rel='stylesheet' type='text/css' href='css/style.css' >
+
+    </head>
+    <body>
+        <!--page-borders-->
+        <div class='page-borders' >
+            <div class='left' ></div>
+            <div class='right' ></div>
+        </div>
+
+
+        <!--==================================================================
+                Preloader
+        ==================================================================-->
+        <div id='preloader' >
+            <div class='loader' >
+                <img src='img/loader.gif' alt>
+            </div>
+        </div>
+
+        <!--==================================================================
+                Main Wrapper
+        ==================================================================-->
+        <div id='main-wrapper' >
+
+            <section class='section bg-lightgray' >
+                <div class='container' >
+                    <img src='img/logo.png' alt>
+                </div>
+            </section>
+            <!--==================================================================
+                    Intro Section
+            ==================================================================-->
+            <section id='clients' class='section clients-section bg-lightgray' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>Mno List</h2>
+                        <p>Get list of Mno</p>
+                    </div>
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Parameter</th>
+                                <th scope="col">Constraints</th>
+                                <th scope="col">Precision</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;" scope="row">INPUT</th>
+                                <td>header</td>
+                                <td>object, Not Null</td>
+                                <td>Header object</td>
+                            </tr>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;" rowspan="3" scope="row">OUTPUT</th>
+                                <td>header</td>
+                                <td>object, Not Null</td>
+                                <td>Header object</td>
+                            </tr>
+                            <tr>
+                                <td>mno</td>
+                                <td>object list</td>
+                                <td>Mno list object </td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>object, Not Null</td>
+                                <td>Status object </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                    Features Section -- 4
+            ==================================================================-->
+            <section id='faq' class='section faq-section' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>getmno</h2>
+                        <p>POST ==><span id="link"></span></p>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>HEADER:Content-Type >> application/json</h4>
+                            <h4>Body</h4>
+                            <p>
+
+                            <pre>
+{
+    "header": {
+        "idmsg":"MN0000000101",
+        "mac":"959251527b6f3058"
+    }
+}
+							</p>
+						</div>
+					</div>
+                                    <div class='col-md-6' >
+						<div class='faq' >
+							<h4>RESPONSE  (Content-Type >> application/json)</h4>
+							<h4>Body</h4>
+							<p>
+							
+							<pre>
+{
+    "header": {
+        "idmsg": "MN0000000101",
+        "mac": "EFE8CC38C264ED55"
+    },
+    "mno": [
+        {
+            "mnocode": "2901",
+            "mnolabel": "1stNET",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "3321",
+                            "denominationvalue": "5"
+                        },
+                        {
+                            "denominationcode": "3341",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "3361",
+                            "denominationvalue": "20"
+                        },
+                        {
+                            "denominationcode": "7201",
+                            "denominationvalue": "25"
+                        }
+                    ],
+                    "servicecode": "2461",
+                    "servicelabel": "ISP"
+                }
+            ]
+        },
+        {
+            "mnocode": "2921",
+            "mnolabel": "Digital Impulse",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "4001",
+                            "denominationvalue": "5"
+                        },
+                        {
+                            "denominationcode": "4021",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "4041",
+                            "denominationvalue": "20"
+                        },
+                        {
+                            "denominationcode": "4061",
+                            "denominationvalue": "40"
+                        },
+                        {
+                            "denominationcode": "4081",
+                            "denominationvalue": "50"
+                        }
+                    ],
+                    "servicecode": "2461",
+                    "servicelabel": "ISP"
+                }
+            ]
+        },
+        {
+            "mnocode": "2941",
+            "mnolabel": "LTT",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "2901",
+                            "denominationvalue": "5"
+                        },
+                        {
+                            "denominationcode": "2941",
+                            "denominationvalue": "20"
+                        },
+                        {
+                            "denominationcode": "2961",
+                            "denominationvalue": "30"
+                        },
+                        {
+                            "denominationcode": "2981",
+                            "denominationvalue": "40"
+                        }
+                    ],
+                    "servicecode": "2461",
+                    "servicelabel": "ISP"
+                }
+            ]
+        },
+        {
+            "mnocode": "2961",
+            "mnolabel": "AlReyada",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "3001",
+                            "denominationvalue": "5"
+                        },
+                        {
+                            "denominationcode": "3021",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "3041",
+                            "denominationvalue": "20"
+                        },
+                        {
+                            "denominationcode": "11321",
+                            "denominationvalue": "25"
+                        },
+                        {
+                            "denominationcode": "3061",
+                            "denominationvalue": "35"
+                        },
+                        {
+                            "denominationcode": "11341",
+                            "denominationvalue": "55"
+                        }
+                    ],
+                    "servicecode": "2461",
+                    "servicelabel": "ISP"
+                }
+            ]
+        },
+        {
+            "mnocode": "2981",
+            "mnolabel": "AlMadar",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "4801",
+                            "denominationvalue": "3"
+                        },
+                        {
+                            "denominationcode": "8401",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "9601",
+                            "denominationvalue": "20"
+                        },
+                        {
+                            "denominationcode": "10001",
+                            "denominationvalue": "25"
+                        },
+                        {
+                            "denominationcode": "11241",
+                            "denominationvalue": "100"
+                        }
+                    ],
+                    "servicecode": "2481",
+                    "servicelabel": "Mobile TopUp"
+                }
+            ]
+        },
+        {
+            "mnocode": "3001",
+            "mnolabel": "HLC",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "2921",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "11261",
+                            "denominationvalue": "20"
+                        }
+                    ],
+                    "servicecode": "2481",
+                    "servicelabel": "Mobile TopUp"
+                }
+            ]
+        },
+        {
+            "mnocode": "3021",
+            "mnolabel": "Libyana",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "4401",
+                            "denominationvalue": "3"
+                        },
+                        {
+                            "denominationcode": "9201",
+                            "denominationvalue": "5"
+                        },
+                        {
+                            "denominationcode": "9221",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "11641",
+                            "denominationvalue": "100"
+                        }
+                    ],
+                    "servicecode": "2481",
+                    "servicelabel": "Mobile TopUp"
+                }
+            ]
+        },
+        {
+            "mnocode": "3041",
+            "mnolabel": "LibyanSpider",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "10861",
+                            "denominationvalue": "100"
+                        }
+                    ],
+                    "servicecode": "2501",
+                    "servicelabel": "Prepaid Voucher"
+                }
+            ]
+        },
+        {
+            "mnocode": "3061",
+            "mnolabel": "Wecard",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "9281",
+                            "denominationvalue": "100"
+                        },
+                        {
+                            "denominationcode": "11301",
+                            "denominationvalue": "250"
+                        }
+                    ],
+                    "servicecode": "2501",
+                    "servicelabel": "Prepaid Voucher"
+                }
+            ]
+        },
+        {
+            "mnocode": "4401",
+            "mnolabel": "Connect",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "11201",
+                            "denominationvalue": "10"
+                        },
+                        {
+                            "denominationcode": "12441",
+                            "denominationvalue": "40"
+                        },
+                        {
+                            "denominationcode": "11221",
+                            "denominationvalue": "50"
+                        }
+                    ],
+                    "servicecode": "2461",
+                    "servicelabel": "ISP"
+                }
+            ]
+        },
+        {
+            "mnocode": "5201",
+            "mnolabel": "LNET",
+            "services": [
+                {
+                    "denominations": [
+                        {
+                            "denominationcode": "12041",
+                            "denominationvalue": "10"
+                        }
+                    ],
+                    "servicecode": "2461",
+                    "servicelabel": "ISP"
+                }
+            ]
+        }
+    ],
+    "status": {
+        "codeerror": "",
+        "codestatus": "0",
+        "descstatus": "APPROVED",
+        "msgerror": " <getMno> "
+    }
+}
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<!--==================================================================
+				Footer
+			==================================================================-->
+			<footer>
+				<div class='container text-center' >
+					<p>Copyright S2M &copy; 2019. <a href="http://s2mworldwide.com" target="_blank">s2mworldwide</a></p>
+				</div>
+			</footer>
+			
+		</div>
+		
+		
+		<!--==================================================================
+			JavaScript Files
+		==================================================================-->
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.fitvids.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/script.js' ></script>
+		<script src='js/masarat.js' ></script>
+		<script>
+                                        document.getElementById("link").innerHTML = gup('link', window.location.href);
+                                                        </script>
+	</body>
+</html>

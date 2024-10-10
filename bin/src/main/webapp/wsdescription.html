@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html class='no-js' >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+        <!--==================================================================
+                Your Title
+        ==================================================================-->
+        <title>OPENGATE API SPECIFICATIONS</title>
+        <link rel="icon" type="image/png" href="img/ico.png" sizes="60x60">
+
+        <!--==================================================================
+                CSS Stylesheets
+        ==================================================================-->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+        <link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+        <link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
+        <link rel='stylesheet' type='text/css' href='css/style.css' >
+
+    </head>
+    <body>
+        <!--page-borders-->
+        <div class='page-borders' >
+            <div class='left' ></div>
+            <div class='right' ></div>
+        </div>
+
+
+        <!--==================================================================
+                Preloader
+        ==================================================================-->
+        <div id='preloader' >
+            <div class='loader' >
+                <img src='img/loader.gif' alt>
+            </div>
+        </div>
+
+        <!--==================================================================
+                Main Wrapper
+        ==================================================================-->
+        <div id='main-wrapper' >
+
+            <section class='section bg-lightgray' >
+                <div class='container' >
+                    <img src='img/logo.png' alt>
+                </div>
+            </section>
+            <!--==================================================================
+                    Intro Section
+            ==================================================================-->
+            <section id='clients' class='section clients-section bg-lightgray' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>SS-WALLET API DESCRIPTION</h2>
+                        <p>V5.0::09/13/2019</p>
+                    </div>
+                    <table class="table table-bordered table-dark">
+                        <tbody>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:center;  font-size: 24px;" colspan="4" scope="row">Summary</th>
+                            </tr>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:left; font-size: 16px;" colspan="4" scope="row">Requirements</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2">REQ-001: Enrolment</td>
+                                <td colspan="2"><a href="Enrolment Customer.html?link=http://Host/Link/enrollcustomer"  target="_blank">Enrolment Customer</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="Enrolment Merchant.html?link=http://Host/Link/enrollmerchant"  target="_blank">Enrolment Merchant</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-002: Get Balance</td>
+                                <td colspan="2"><a href="Balance.html?link=http://Host/Link/getbalance"  target="_blank">Balance</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-003: Get number of Transactions</td>
+                                <td colspan="2" rowspan="2"><a href="Transactions List.html?link=http://Host/Link/gettransactions"  target="_blank">Transactions List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-004: Get Transactions by Date and transaction type</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-005: Voucher Card (MNO)</td>
+                                <td colspan="2"><a href="Voucher.html?link=http://Host/Link/payvoucher"  target="_blank">Voucher</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-006: Top up Digital Wallet</td>
+                                <td colspan="2"><a href="Top up.html?link=http://Host/Link/topup"  target="_blank">Top up</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-007: Top Up from Select System wallet to Tadawul</td>
+                                <td colspan="2"><a href="Top up 3rd.html?link=http://Host/Link/topup3rd"  target="_blank">Top up 3rd</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-008: Bill payment</td>
+                                <td colspan="2"><a href="Bill Payment.html?link=http://Host/Link/billpayment"  target="_blank">Bill Payment</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">REQ-009: MobiCash</td>
+                                <td colspan="2"><a href="Payment.html?link=http://Host/Link/payment"  target="_blank">Payment</a></td>
+                            </tr>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:left; font-size: 16px;" colspan="4" scope="row">Appendix</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">ENTITIES LIST</td>
+                                <td colspan="2"><a href="#entitylist">Entities List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">ERRORS LIST</td>
+                                <td colspan="2"><a href="#errorlist">ERRORS List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">LIST OF ACCOUNT PROGRAMS</td>
+                                <td colspan="2"><a href="Account Programs List.html?link=http://Host/Link/getapl"  target="_blank">Account Programs List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">LIST OF MERCHANT PROGRAMS </td>
+                                <td colspan="2"><a href="Merchant Programs List.html?link=http://Host/Link/getmpl"  target="_blank">Merchant Programs List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">LIST OF SS MNO</td>
+                                <td colspan="2"><a href="MNO List.html?link=http://Host/Link/getmno"  target="_blank">Mno List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">LIST OF SS BANKS</td>
+                                <td colspan="2"><a href="Banks List.html?link=http://Host/Link/getbanks"  target="_blank">Banks List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">LIST OF SS BRANCHS</td>
+                                <td colspan="2"><a href="Branchs List.html?link=http://Host/Link/getbranchs"  target="_blank">Branchs List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">LIST OF SS CITIES</td>
+                                <td colspan="2"><a href="Cities List.html?link=http://Host/Link/getcities"  target="_blank">Cities List</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">CUSTOMER INFO</td>
+                                <td colspan="2"><a href="Customer Info.html?link=http://Host/Link/getcustomerinfo"  target="_blank">Customer Info</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">MERCHANT INFO</td>
+                                <td colspan="2"><a href="Merchant Info.html?link=http://Host/Link/getmerchantinfo"  target="_blank">Merchant Info</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">WALLETS INFO</td>
+                                <td colspan="2"><a href="Wallets Info.html?link=http://Host/Link/getwalletsinfo"  target="_blank">Wallets Info</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">UPDATE CUSTOMER INFO</td>
+                                <td colspan="2"><a href="Customer Info Update.html?link=http://Host/Link/updatecustomerInfo"  target="_blank">Customer Info Update</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">PING SERVER</td>
+                                <td colspan="2"><a href="Ping Server.html?link=http://Host/Link/bingserver"  target="_blank">Ping Server</a></td>
+                            </tr>
+                            <tr>
+                                <th  style="vertical-align : middle;text-align:left; font-size: 16px;" colspan="4" scope="row"><a href="#rules">API RULES</a></th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+
+            <section id='entitylist' class='section faq-section' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>Entities List</h2>
+                        <p>The list of all entities used in the API described member by member</p>
+                    </div>
+
+                    <div id="accordion">
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingHeader">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseHeader" aria-expanded="false" aria-controls="collapseHeader">
+                                        Header Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseHeader" class="collapse" aria-labelledby="headingHeader" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>idmsg</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>Message identification  (accept AN), masarat unique identifier for financial trx</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mac</td>
+                                                <td>Max  200, Not Null</td>
+                                                <td>data hash encryption </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingIdentity">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseIdentity" aria-expanded="false" aria-controls="collapseIdentity">
+                                        Identity Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseIdentity" class="collapse" aria-labelledby="headingIdentity" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>customercode</td>
+                                                <td>Max  20</td>
+                                                <td>unique identifier on SS for Enrolment/update Customer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>walletcode</td>
+                                                <td>Max  20</td>
+                                                <td>unique identifier on SS for Enrolment/update Customer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merchantid</td>
+                                                <td>Max  20</td>
+                                                <td>unique identifier on SS for Enrolment Merchant</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingStatus">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseStatus" aria-expanded="false" aria-controls="collapseStatus">
+                                        Status Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseStatus" class="collapse" aria-labelledby="headingStatus" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>codestatus</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td rowspan="2">Response Status Code & Description :
+                                                    0:	Approved,
+                                                    1:	Waiting for approval,
+                                                    2:	Not approved,
+                                                    3:	Error</td>
+                                            </tr>
+                                            <tr>
+                                                <td>descstatus</td>
+                                                <td>Max  30, Not Null</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>codeerror</td>
+                                                <td>Max  5</td>
+                                                <td>Error Code (see <a href="#errorlist">ERRORS List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>msgerror</td>
+                                                <td>Max undefined</td>
+                                                <td>Error Message (see <a href="#errorlist">ERRORS List</a>)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingAddress">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseAddress" aria-expanded="false" aria-controls="collapseAddress">
+                                        Address Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseAddress" class="collapse" aria-labelledby="headingAddress" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>addrtype</td>
+                                                <td>Max  2, Not Null</td>
+                                                <td>Address Used Type list<br>
+                                                    Possible values (01 , 02 , 03 , 04, 05 or 06) :<br>
+                                                    01 Mailing Address<br>
+                                                    03 Employer Address<br>
+                                                    02 Residence Address<br>
+                                                    04 Electronic Address<br>
+                                                    05 Registered Office<br>
+                                                    06 Administrative Office  </td>
+                                            </tr>
+                                            <tr>
+                                                <td>addcorr</td>
+                                                <td>Max  2, Not Null</td>
+                                                <td>Address Used correspondence list<br>
+                                                    Possible values (01 , 02 , 03 , 04, 05 or 06) :<br>
+                                                    01 Default<br>
+                                                    02 Pin Mailers<br>
+                                                    03 Statements<br>
+                                                    04 Gift<br>
+                                                    05 Letters<br>
+                                                    06 Invitation </td>
+                                            </tr>
+                                            <tr>
+                                                <td>addr1 </td>
+                                                <td>Max  80, Not Null</td>
+                                                <td>Address Line 1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td>addr2 </td>
+                                                <td>Max  80, Not Null</td>
+                                                <td>Address Line 2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td>addstreet </td>
+                                                <td>Max 40</td>
+                                                <td>Address street </td>
+                                            </tr>
+                                            <tr>
+                                                <td>addzipd </td>
+                                                <td>Max 5</td>
+                                                <td>Zip code address  </td>
+                                            </tr>
+                                            <tr>
+                                                <td>citycode </td>
+                                                <td>Max 10</td>
+                                                <td>Address city Code ( see <a href="Cities List.html?link=http://Host/Link/getcities"  target="_blank">Cities List</a> ) </td>
+                                            </tr>
+                                            <tr>
+                                                <td>postalcode </td>
+                                                <td>Max 20</td>
+                                                <td>The postal code address</td>
+                                            </tr>
+                                            <tr>
+                                                <td>country </td>
+                                                <td>Max 10</td>
+                                                <td>Country Code (ISO country numeric codes)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingCustomer">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="false" aria-controls="collapseCustomer">
+                                        Customer Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseCustomer" class="collapse" aria-labelledby="headingCustomer" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>enfirstname</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>The customer First Name In English </td>
+                                            </tr>
+                                            <tr>
+                                                <td>enlastname</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>The customer Last Name in English</td>
+                                            </tr>
+                                            <tr>
+                                                <td>arfirstname</td>
+                                                <td>Max  40</td>
+                                                <td>The customer First Name in Arabic</td>
+                                            </tr>
+                                            <tr>
+                                                <td>arlastname</td>
+                                                <td>Max  40</td>
+                                                <td>The customer Last Name in Arabic</td>
+                                            </tr>
+                                            <tr>
+                                                <td>gender</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td>Possible values (M or F): <br>
+                                                    M: Men<br>
+                                                    F: Women </td>
+                                            </tr>
+                                            <tr>
+                                                <td>title</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td>Possible values (1,2 or 3): <br>
+                                                    1 : Mr <br>
+                                                    2 : Mrs <br>
+                                                    3 : Miss</td>
+                                            </tr>
+                                            <tr>
+                                                <td>dateob</td>
+                                                <td>yyyy-MM-dd, Not Null</td>
+                                                <td>Birth date of customer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>placeob</td>
+                                                <td>Max  15</td>
+                                                <td>Place of birth</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mobile</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Customer mobile number (with 218 not + or 00)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>email</td>
+                                                <td>Max  128</td>
+                                                <td>Customer email</td>
+                                            </tr>
+                                            <tr>
+                                                <td>address</td>
+                                                <td>list object, Not Null</td>
+                                                <td>The object address List</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bankcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Bank Code ( see <a href="Banks List.html?link=http://Host/Link/getbanks"  target="_blank">Banks List</a>): <br>
+                                                    - Not supported in wallet update service </td>
+                                            </tr>
+                                            <tr>
+                                                <td>branchcode</td>
+                                                <td>fixed:99999, Not Null</td>
+                                                <td>Branch Code ( virtual branch code = 99999 ):<br>
+                                                    - Not supported in wallet update service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>nationalid</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Customer National ID:<br>
+                                                    - Not supported in wallet update service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>nationality</td>
+                                                <td>Max  15</td>
+                                                <td>Customer Nationality </td>
+                                            </tr>
+                                            <tr>
+                                                <td>accountprogramcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Account program ( see <a href="Account Programs List.html?link=http://Host/Link/getapl"  target="_blank">Account Programs List</a>):<br>
+                                                    - Not supported in Customer Info service<br>
+                                                    - Not supported in wallet update service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>accountnumber</td>
+                                                <td>Max  24, Not Null</td>
+                                                <td>Customer Account Number:<br>
+                                                    - Not supported in Customer Info service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>customercode</td>
+                                                <td>Max  20</td>
+                                                <td>unique identifier on SS for the customer-if exist-:<br>
+                                                    - Not supported in Enrolment Customer service<br>
+                                                    - Not supported in wallet update service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>passportnumber</td>
+                                                <td>Max  20</td>
+                                                <td>Customer passport number:<br>
+                                                    - Not supported in wallet update service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>passportexpiration</td>
+                                                <td>yyyy-MM-dd</td>
+                                                <td>Customer passport expiration date:<br>
+                                                    - Not supported in wallet update service</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingMerchant">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseMerchant" aria-expanded="false" aria-controls="collapseMerchant">
+                                        Merchant Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseMerchant" class="collapse" aria-labelledby="headingMerchant" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>enfirstname</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>The Merchant owner Last Name in English</td>
+                                            </tr>
+                                            <tr>
+                                                <td>enlastname</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>The Merchant owner Last Name in English</td>
+                                            </tr>							  
+                                            <tr>
+                                                <td>gender</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td>Possible values (M or F):<br>
+                                                    M: Men<br>
+                                                    F: Women</td>
+                                            </tr>
+                                            <tr>
+                                                <td>title</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td>Possible values (1,2 or 3):<br>
+                                                    1 : Mr<br>
+                                                    2 : Mrs<br>
+                                                    3 : Miss </td>
+                                            </tr>
+                                            <tr>
+                                                <td>dateob</td>
+                                                <td>yyyy-MM-dd</td>
+                                                <td>Birth date of merchant owner</td>
+                                            </tr>
+                                            <tr>
+                                                <td>placeob</td>
+                                                <td>Max  15</td>
+                                                <td>Place of birth</td>
+                                            </tr>							  
+                                            <tr>
+                                                <td>merchantid</td>
+                                                <td>Max  20</td>
+                                                <td>unique identifier on SS for the merchant :<br>
+                                                    To add in Enrolment Merchant service, in case merchant exist but not enrolled for a wallet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merchantname</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>The Merchant Name</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mobile</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Merchant mobile number (with 00 not +)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>email</td>
+                                                <td>Max  128</td>
+                                                <td>Merchant email</td>
+                                            </tr>							  
+                                            <tr>
+                                                <td>address</td>
+                                                <td>list object, Not Null</td>
+                                                <td>The object address List</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bankcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Bank Code ( see <a href="Banks List.html?link=http://Host/Link/getbanks"  target="_blank">Banks List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>branchcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>branch Code ( see <a href="Branchs List.html?link=http://Host/Link/getbranchs"  target="_blank">Branchs List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>nationalid</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>data hash encryption </td>
+                                            </tr>							  
+                                            <tr>
+                                                <td>nationality</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Merchant Nationality </td>
+                                            </tr>
+                                            <tr>
+                                                <td>accountnumber</td>
+                                                <td>Max  24, Not Null</td>
+                                                <td>Merchant Account Number</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merprogramcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Merchant program ( see <a href="Merchant Programs List.html?link=http://Host/Link/getmpl"  target="_blank">Merchant Programs List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>meractivitycode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Merchant program ( see <a href="Merchant Programs List.html?link=http://Host/Link/getmpl"  target="_blank">Merchant Programs List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merpaymentmode</td>
+                                                <td>list object, Not Null</td>
+                                                <td>The payment mode object list</td>
+                                            </tr>
+                                            <tr>
+                                                <td>accountprogramcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Account program ( see <a href="Account Programs List.html?link=http://Host/Link/getapl"  target="_blank">Account Programs List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>passportnumber</td>
+                                                <td>Max  20</td>
+                                                <td>Merchant passport number</td>
+                                            </tr>
+                                            <tr>
+                                                <td>passportexpiration</td>
+                                                <td>yyyy-MM-dd</td>
+                                                <td>Merchant passport expiration date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingPaymentMode">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsePaymentMode" aria-expanded="false" aria-controls="collapsePaymentMode">
+                                        Payment Mode Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapsePaymentMode" class="collapse" aria-labelledby="headingPaymentMode" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>merpaymodcode</td>
+                                                <td>Max  10, Not Null</td>
+                                                <td rowspan="2">Payment Mode code  & Label :<br>
+                                                    1:CASH<br>
+                                                    2:WIRE TRANSFER<br>
+                                                    3:CASHIER CARD TOP-UP<br>
+                                                    4:CORPORATE CARD TOP-UP.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merpaymodlabel</td>
+                                                <td>Max  60, Not Null</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merpaymodrate</td>
+                                                <td>Max  10, Not Null</td>
+                                                <td>The rate used for payment mode :set a rate for each payment method, with a total of 100% in the list</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merpaymoddefault</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td>Is default payment, possible values:<br>
+                                                    Y : yes<br>
+                                                    N : No.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingBalance">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBalance" aria-expanded="false" aria-controls="collapseBalance">
+                                        Balance Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseBalance" class="collapse" aria-labelledby="headingBalance" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>available</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>wallet amount Balance</td>
+                                            </tr>
+                                            <tr>
+                                                <td>currencycode</td>
+                                                <td>Max  3</td>
+                                                <td>Currency ISO ALPHA Code (Default LYD)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingInitiator">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseInitiator" aria-expanded="false" aria-controls="collapseInitiator">
+                                        Initiator Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseInitiator" class="collapse" aria-labelledby="headingInitiator" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>type</td>
+                                                <td>Max  1, Not Null</td>
+                                                <td>Request Initiator type :<br>
+                                                    M:Merchant<br>
+                                                    C:Customer.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>identifier</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SS for the Initiator( customer Code or Merchant ID)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>walletcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SS for the Wallet for customer  :<br>
+                                                    - not supported  in wallets info service.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingFilter">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+                                        Filter Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFilter" class="collapse" aria-labelledby="headingFilter" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>idtrans</td>
+                                                <td>Max  40</td>
+                                                <td>id msg for original trx, if filled other params are ignored</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ntrans</td>
+                                                <td>Max  2</td>
+                                                <td>the last number of transactions If no period is filled, this param is used, max of 99 trx</td>
+                                            </tr>
+                                            <tr>
+                                                <td>startdate</td>
+                                                <td>yyyy-MM-dd HH:mm:ss</td>
+                                                <td>Selection Start Date</td>
+                                            </tr>
+                                            <tr>
+                                                <td>enddate</td>
+                                                <td>yyyy-MM-dd HH:mm:ss</td>
+                                                <td>Selection End Date</td>
+                                            </tr>
+                                            <tr>
+                                                <td>transactiontype</td>
+                                                <td>1</td>
+                                                <td>Possible values (D or C or empty for both):<br>
+                                                    D: Debit<br>
+                                                    C: Credit.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingTrasansaction">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTrasansaction" aria-expanded="false" aria-controls="collapseTrasansaction">
+                                        Trasansaction Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTrasansaction" class="collapse" aria-labelledby="headingTrasansaction" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>transnumber</td>
+                                                <td>Max  12, Not Null</td>
+                                                <td>Transaction reference number</td>
+                                            </tr>
+                                            <tr>
+                                                <td>transdate</td>
+                                                <td>DD/MM/YY, Not Null</td>
+                                                <td>Transaction Date</td>
+                                            </tr>
+                                            <tr>
+                                                <td>translabel</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>Transaction Label </td>
+                                            </tr>
+                                            <tr>
+                                                <td>transamount</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Transaction Amount </td>
+                                            </tr>
+                                            <tr>
+                                                <td>transtype</td>
+                                                <td>Max 1, Not Null</td>
+                                                <td>D : for Debit<br>
+                                                    C : for Credit.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>transsupport</td>
+                                                <td>Max 10, Not Null</td>
+                                                <td>Possible Values:<br>
+                                                    - CARD<br>
+                                                    - WALLET<br>
+                                                    - ACCOUNT<br></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingRequest">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseRequest" aria-expanded="false" aria-controls="collapseRequest">
+                                        Request Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseRequest" class="collapse" aria-labelledby="headingRequest" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>date</td>
+                                                <td>yyyy-MM-dd HH:mm:ss</td>
+                                                <td>Transaction Date (default today)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>addid</td>
+                                                <td>Max  20</td>
+                                                <td>  - Voucher Service: Additional identifier in this case of voucher is the MNO operator will be defined in Select System as a merchant with a specific identifier and account<br>
+                                                    - Payment Service: Additional identifier in this case of payment is the Merchant ID<br>
+                                                    - Top up Service: Not supported<br>
+                                                    - Top up 3rd Service: Additional identifier in this case of top up 3rd is the 3rd part will be set in Select System as a Merchant with specific ID and account  (if not filled the default value is Tadawul as payment scheme)<br>
+                                                    - Bill Payment Service : Additional identifier in this case of bill payment is the biller will be set in Select System as a Merchant with specific ID and account<br>
+                                            </tr>
+                                            <tr>
+                                                <td>adddata</td>
+                                                <td>Max  15</td>
+                                                <td>- Voucher Service: denomination code<br>
+                                                    - Payment, Top up & top up 3rd Service: Not supported<br>
+                                                    - Bill Payment Service : Bill Number.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>amount</td>
+                                                <td>Max  20</td>
+                                                <td>Amount to be debited <br>
+                                                    - Voucher Service: Not supported</td>
+                                            </tr>
+                                            <tr>
+                                                <td>currency</td>
+                                                <td>Max  3</td>
+                                                <td>Currency ISO ALPHA CODE (default LYD)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>label</td>
+                                                <td>Max 50</td>
+                                                <td>transaction description</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingAuthorization">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="false" aria-controls="collapseAuthorization">
+                                        Authorization Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseAuthorization" class="collapse" aria-labelledby="headingAuthorization" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>referenceid</td>
+                                                <td>Max  12</td>
+                                                <td>Transaction Reference</td>
+                                            </tr>
+                                            <tr>
+                                                <td>authcode</td>
+                                                <td>Max  6</td>
+                                                <td>Authorization Code</td>
+                                            </tr>
+                                            <tr>
+                                                <td>date</td>
+                                                <td>DD/MM/YY HH:mm:ss</td>
+                                                <td>Authorization Server  Date (default today)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingAPL">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseAPL" aria-expanded="false" aria-controls="collapseAPL">
+                                        APL  Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseAPL" class="collapse" aria-labelledby="headingAPL" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>accprogramcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for Account Program</td>
+                                            </tr>
+                                            <tr>
+                                                <td>accprogramlabel</td>
+                                                <td>Max  60, Not Null</td>
+                                                <td>Account Program Label</td>
+                                            </tr>
+                                            <tr>
+                                                <td>limits</td>
+                                                <td>object list</td>
+                                                <td>The limits List aggregate object</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingLimits">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseLimits" aria-expanded="false" aria-controls="collapseLimits">
+                                        Limits  Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseLimits" class="collapse" aria-labelledby="headingLimits" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>label</td>
+                                                <td>Max  30, Not Null</td>
+                                                <td>The attribute is used to identify the value. Possible Values : <br>
+                                                    - Limit label : (period + operation label), Ex : Daily Purchase<br>
+                                                    - fees label.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>value</td>
+                                                <td>Max  40, not null</td>
+                                                <td>The real value</td>
+                                            </tr>
+                                            <tr>
+                                                <td>valuetype</td>
+                                                <td>Max  20, not null</td>
+                                                <td>This is the corresponding type of value (string, date, integer...)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingMPL">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseMPL" aria-expanded="false" aria-controls="collapseMPL">
+                                        MPL  Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseMPL" class="collapse" aria-labelledby="headingMPL" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>merprocode</td>
+                                                <td>Max  10, Not Null</td>
+                                                <td>Merchant Program Code</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merprolabel</td>
+                                                <td>Max  60, Not Null</td>
+                                                <td>Merchant Program Label</td>
+                                            </tr>
+                                            <tr>
+                                                <td>meractivitieslist</td>
+                                                <td>object list</td>
+                                                <td>merchant activities object list</td>
+                                            </tr>
+                                            <tr>
+                                                <td>merpaymentmode</td>
+                                                <td>object list</td>
+                                                <td>payment mode object list</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingActivities">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseActivities" aria-expanded="false" aria-controls="collapseActivities">
+                                        Activities Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseActivities" class="collapse" aria-labelledby="headingActivities" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>maccode</td>
+                                                <td>Max  30, Not Null</td>
+                                                <td>Marchant activity code</td>
+                                            </tr>
+                                            <tr>
+                                                <td>maciden</td>
+                                                <td>Max  40, not null</td>
+                                                <td>Marchant activity ID</td>
+                                            </tr>
+                                            <tr>
+                                                <td>maclabel</td>
+                                                <td>Max  20, not null</td>
+                                                <td>Marchant activity Label</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingMno">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseMno" aria-expanded="false" aria-controls="collapseMno">
+                                        Mno Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseMno" class="collapse" aria-labelledby="headingMno" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>mnocode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for mno </td>
+                                            </tr>
+                                            <tr>
+                                                <td>mnolabel</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>mno Label </td>
+                                            </tr>
+                                            <tr>
+                                                <td>services</td>
+                                                <td>list object, Not Null</td>
+                                                <td>The object service List</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingService">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseService" aria-expanded="false" aria-controls="collapseService">
+                                        Service Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseService" class="collapse" aria-labelledby="headingService" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>servicecode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for service </td>
+                                            </tr>
+                                            <tr>
+                                                <td>servicelabel</td>
+                                                <td>Max  40, Not Null</td>
+                                                <td>service Label </td>
+                                            </tr>
+                                            <tr>
+                                                <td>denominations</td>
+                                                <td>list object, Not Null</td>
+                                                <td>The object denomination List</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingDenomination">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseDenomination" aria-expanded="false" aria-controls="collapseDenomination">
+                                        Denomination Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseDenomination" class="collapse" aria-labelledby="headingDenomination" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>denominationcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for Denomination </td>
+                                            </tr>
+                                            <tr>
+                                                <td>denominationvalue</td>
+                                                <td>Max  15, Not Null</td>
+                                                <td>denomination value </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingBanks">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBanks" aria-expanded="false" aria-controls="collapseBanks">
+                                        Banks Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseBanks" class="collapse" aria-labelledby="headingBanks" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>bankcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for bank </td>
+                                            </tr>
+                                            <tr>
+                                                <td>banklabel</td>
+                                                <td>Max  60, Not Null</td>
+                                                <td>bank Label </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingBranchs">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBranchs" aria-expanded="false" aria-controls="collapseBranchs">
+                                        Branchs Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseBranchs" class="collapse" aria-labelledby="headingBranchs" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>branchcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for branch </td>
+                                            </tr>
+                                            <tr>
+                                                <td>branchlabel</td>
+                                                <td>Max  60, Not Null</td>
+                                                <td>branch label</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingCities">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCities" aria-expanded="false" aria-controls="collapseCities">
+                                        Cities Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseCities" class="collapse" aria-labelledby="headingCities" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>citycode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SELECTSystem for city </td>
+                                            </tr>
+                                            <tr>
+                                                <td>citylabel</td>
+                                                <td>Max  60, Not Null</td>
+                                                <td>city Label </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingCriteria">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCriteria" aria-expanded="false" aria-controls="collapseCriteria">
+                                        Criteria Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseCriteria" class="collapse" aria-labelledby="headingCriteria" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>nationalid</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>National ID</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bankcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Bank Code ( see <a href="Banks List.html?link=http://Host/Link/getbanks"  target="_blank">Banks List</a>) </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingWallet">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseWallet" aria-expanded="false" aria-controls="collapseWallet">
+                                        Wallet Entity
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseWallet" class="collapse" aria-labelledby="headingWallet" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Parameter</th>
+                                                <th scope="col">Constraints</th>
+                                                <th scope="col">Precision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>wcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>unique identifier on SS for the Wallet </td>
+                                            </tr>
+                                            <tr>
+                                                <td>wstatus</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Possible Values:<br>
+                                                    - Blocked<br>
+                                                    - Monitoring<br>
+                                                    - Deactivated<br>
+                                                    - Cancelled<br>
+                                                    - Replaced<br>
+                                                    - In Instance<br>
+                                                    - Active<br>
+                                                    - Ready For Personalization<br>
+                                                    - Opposed </td>
+                                            </tr>
+                                            <tr>
+                                                <td>wprogramcode</td>
+                                                <td>Max  20, Not Null</td>
+                                                <td>Account program ( see <a href="Account Programs List.html?link=http://Host/Link/getapl"  target="_blank">Account Programs List</a>)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>waccountnumber</td>
+                                                <td>Max  24, Not Null</td>
+                                                <td>Account to whom the wallet route (default)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id='errorlist' class='section faq-section' >
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>Errors List</h2>
+                        <p>The list of all errors used in the API</p>
+                    </div>
+                    <div id="accordion">
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingISO">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseISO" aria-expanded="false" aria-controls="collapseISO">
+                                        ISO Errors, (0xxxx) List
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseISO" class="collapse" aria-labelledby="headingISO" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <tbody>
+                                            <tr>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Code</th>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Description</th>
+                                            </tr>
+                                            <tr><td colspan="2">00001</td><td colspan="2">REMITTANCE_RECORD_NOT_FOUND   </td></tr>
+                                            <tr><td colspan="2">00002</td><td colspan="2">GET_REMITTANCE_INSERT_EXCEPT  </td></tr>
+                                            <tr><td colspan="2">00003</td><td colspan="2">GET_REMITTANCE_INCREMENT_ERROR</td></tr>
+                                            <tr><td colspan="2">00004</td><td colspan="2">GET_REMITTANCE_MAIN_EXCEPT    </td></tr>
+                                            <tr><td colspan="2">00005</td><td colspan="2">GET_REMITTANCE_RECORD_EXCEP   </td></tr>
+                                            <tr><td colspan="2">00006</td><td colspan="2">UPDATE_REMITTANCE_RECORD_EXCEP</td></tr>
+                                            <tr><td colspan="2">00008</td><td colspan="2">VOID_TRANS_EXCEP              </td></tr>
+                                            <tr><td colspan="2">00009</td><td colspan="2">ADJUST_TRANS_EXCEP            </td></tr>
+                                            <tr><td colspan="2">00010</td><td colspan="2">INSERT_TRANS_INCREMENT_ERROR  </td></tr>
+                                            <tr><td colspan="2">00011</td><td colspan="2">INSERT_TRANS_EXCEP            </td></tr>
+                                            <tr><td colspan="2">00012</td><td colspan="2">UPDATE_CRED_REMIT_TOTALS_EXPT </td></tr>
+                                            <tr><td colspan="2">00013</td><td colspan="2">UPDATE_DEB_REMIT_TOTALS_EXPT  </td></tr>
+                                            <tr><td colspan="2">00014</td><td colspan="2">VOID_CRED_REMIT_TOTALS_EXPT   </td></tr>
+                                            <tr><td colspan="2">00015</td><td colspan="2">VOID_DEB_REMIT_TOTALS_EXPT    </td></tr>
+                                            <tr><td colspan="2">00016</td><td colspan="2">INSERT_BU_TRANS_INCREM_EXCP   </td></tr>
+                                            <tr><td colspan="2">00017</td><td colspan="2">INSERT_BUPLOAD_TRANS_EXCEP    </td></tr>
+                                            <tr><td colspan="2">00018</td><td colspan="2">INSERT_BUPLOAD_TRNS_EXP_MAIN  </td></tr>
+                                            <tr><td colspan="2">00019</td><td colspan="2">ONLINE_SALE_PROC_EXCEP        </td></tr>
+                                            <tr><td colspan="2">00020</td><td colspan="2">OFFLINE_SALE_PROC_EXCEP       </td></tr>
+                                            <tr><td colspan="2">00021</td><td colspan="2">ONLINE_REFUND_PROC_EXCEP      </td></tr>
+                                            <tr><td colspan="2">00022</td><td colspan="2">OFFLINE_REFUND_PROC_EXCEP     </td></tr>
+                                            <tr><td colspan="2">00023</td><td colspan="2">ADJUST_REFUND_PROC_EXCEP      </td></tr>
+                                            <tr><td colspan="2">00024</td><td colspan="2">ADJUST_SALE_PROC_EXCEP        </td></tr>
+                                            <tr><td colspan="2">00025</td><td colspan="2">VOID_REFUND_PROC_EXCEP        </td></tr>
+                                            <tr><td colspan="2">00026</td><td colspan="2">VOID_SALE_PROC_EXCEP          </td></tr>
+                                            <tr><td colspan="2">00027</td><td colspan="2">GET_REM_FOR_FIRST_SET_ERROR   </td></tr>
+                                            <tr><td colspan="2">00028</td><td colspan="2">DEBIT_COUNTER_ERROR           </td></tr>
+                                            <tr><td colspan="2">00029</td><td colspan="2">DEBIT_AMOUNT_ERROR            </td></tr>
+                                            <tr><td colspan="2">00030</td><td colspan="2">CREDIT_COUNTER_ERROR          </td></tr>
+                                            <tr><td colspan="2">00031</td><td colspan="2">CREDIT_AMOUNT_ERROR           </td></tr>
+                                            <tr><td colspan="2">00032</td><td colspan="2">SETTLEMENT_PROC_EXCEP         </td></tr>
+                                            <tr><td colspan="2">00033</td><td colspan="2">SETTLEMENT_AFT_UPLOAD_EXCEP   </td></tr>
+                                            <tr><td colspan="2">00034</td><td colspan="2">GET_REMITTANCE_TERMINAL_NULL  </td></tr>
+                                            <tr><td colspan="2">00035</td><td colspan="2">ADJUST_ORIG_TRANS_NOT_FOUND   </td></tr>
+                                            <tr><td colspan="2">00036</td><td colspan="2">Switch_End_Of_Day_Error       </td></tr>
+                                            <tr><td colspan="2">00037</td><td colspan="2">Bank_Auth_File_Error          </td></tr>
+                                            <tr><td colspan="2">00038</td><td colspan="2">Bank_Auth_Log_Error           </td></tr>
+                                            <tr><td colspan="2">00039</td><td colspan="2">Sms_Autho_Integ_ERROR  </td></tr>
+                                            <tr><td colspan="2">00040</td><td colspan="2">POS_BATCH_DUPLICATED_EXCEP    </td></tr>
+                                            <tr><td colspan="2">00041</td><td colspan="2">Global_Limit_Error            </td></tr>
+                                            <tr><td colspan="2">00042</td><td colspan="2">GLOBAL_LIMIT                  </td></tr>
+                                            <tr><td colspan="2">00043</td><td colspan="2">UPDATE_TRSF_REMIT_TOTALS_EXPT </td></tr>
+                                            <tr><td colspan="2">00050</td><td colspan="2">Card_Number_Error             </td></tr>
+                                            <tr><td colspan="2">00051</td><td colspan="2">Card_Type_Error               </td></tr>
+                                            <tr><td colspan="2">00052</td><td colspan="2">Card_Status_Error             </td></tr>
+                                            <tr><td colspan="2">00053</td><td colspan="2">Card_Expiry_Date_Error        </td></tr>
+                                            <tr><td colspan="2">00054</td><td colspan="2">Reload_Card_Error             </td></tr>
+                                            <tr><td colspan="2">00055</td><td colspan="2">Account_Routing_Error         </td></tr>
+                                            <tr><td colspan="2">00056</td><td colspan="2">Account_Status_Error          </td></tr>
+                                            <tr><td colspan="2">00103</td><td colspan="2">INVALID_MERCHANT              </td></tr>
+                                            <tr><td colspan="2">00105</td><td colspan="2">DO_NOT_HONOR                  </td></tr>
+                                            <tr><td colspan="2">00112</td><td colspan="2">TRANS_NOT_ALLOWED             </td></tr>
+                                            <tr><td colspan="2">00113</td><td colspan="2">INVALID_AMOUNT                </td></tr>
+                                            <tr><td colspan="2">00114</td><td colspan="2">INVALID_CARD                  </td></tr>
+                                            <tr><td colspan="2">00151</td><td colspan="2">INSUFFICIENT_FUNDS            </td></tr>
+                                            <tr><td colspan="2">00154</td><td colspan="2">EXPIRED_CARD                  </td></tr>
+                                            <tr><td colspan="2">00158</td><td colspan="2">TRANS_NOT_ALLOWED_TO_TERM     </td></tr>
+                                            <tr><td colspan="2">00161</td><td colspan="2">W_AMOUNT_EXCEEDED             </td></tr>
+                                            <tr><td colspan="2">00165</td><td colspan="2">W_COUNTER_EXCEEDED            </td></tr>
+                                            <tr><td colspan="2">00173</td><td colspan="2">CVR_DECLINE                   </td></tr>
+                                            <tr><td colspan="2">00174</td><td colspan="2">TVR_DECLINE                   </td></tr>
+                                            <tr><td colspan="2">00180</td><td colspan="2">POS_BATCH_DUPLICATED          </td></tr>
+                                            <tr><td colspan="2">00191</td><td colspan="2">ISSUER_NOT_AVAILABLE          </td></tr>
+                                            <tr><td colspan="2">00195</td><td colspan="2">POS_BATCH_SETTLMNT_ERROR      </td></tr>
+                                            <tr><td colspan="2">00196</td><td colspan="2">SYSTEM_MALFUNCTION            </td></tr>
+                                            <tr><td colspan="2">00204</td><td colspan="2">CARD_CAPTURE                  </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>	
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingChecking">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseChecking" aria-expanded="false" aria-controls="collapseChecking">
+                                        Checking Errors, (1xxxx) List
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseChecking" class="collapse" aria-labelledby="headingChecking" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <tbody>
+                                            <tr>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Code</th>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Description</th>
+                                            </tr>
+                                            <tr><td colspan="2">10000</td><td colspan="2">MAC FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10001</td><td colspan="2">MAC FIELD LENGHT IS INCORRECT, MAX 200</td></tr>
+                                            <tr><td colspan="2">10002</td><td colspan="2">ID MSG REQUEST FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10003</td><td colspan="2">ID MSG REQUEST LENGHT IS INCORRECT, MAX 12</td></tr>
+                                            <tr><td colspan="2">10004</td><td colspan="2">INITIATOR IDENTIFIER FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10005</td><td colspan="2">INITIATOR IDENTIFIER LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10006</td><td colspan="2">INITIATOR IDENTIFIER VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10007</td><td colspan="2">INITIATOR TYPE FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10008</td><td colspan="2">INITIATOR TYPE FIELD VALUE INCORRECT, SHOULD BE 'M' OR 'C'</td></tr>
+                                            <tr><td colspan="2">10009</td><td colspan="2">INITIATOR WALLET CODE FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10010</td><td colspan="2">INITIATOR WALLET CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10011</td><td colspan="2">INITIATOR WALLET CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10012</td><td colspan="2">NTRANS FIELD LENGHT IS INCORRECT, MIN (1 TRX) & MAX (20 TRX)</td></tr>
+                                            <tr><td colspan="2">10013</td><td colspan="2">NTRANS FIELD VALUE INCORRECT, SHOULD BE NUMERIC, MAX (20 TRX)</td></tr>
+                                            <tr><td colspan="2">10016</td><td colspan="2">BANK CODE FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10017</td><td colspan="2">BANK CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10018</td><td colspan="2">BANK CODE FIELD VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10020</td><td colspan="2">AMOUNT FIELD COULD NOT BE EMPTY   </td></tr>
+                                            <tr><td colspan="2">10021</td><td colspan="2">AMOUNT LENGHT IS INCORRECT, MAX 20  </td></tr>
+                                            <tr><td colspan="2">10022</td><td colspan="2">AMOUNT VALUE INCORRECT, SHOULD BE NUMERIC   </td></tr>
+                                            <tr><td colspan="2">10023</td><td colspan="2">CURRENCY FIELD COULD NOT BE EMPTY </td></tr>
+                                            <tr><td colspan="2">10024</td><td colspan="2">CURRENCY LENGHT IS INCORRECT, MAX 3</td></tr>
+                                            <tr><td colspan="2">10025</td><td colspan="2">ADD ID FIELD COULD NOT BE EMPTY    </td></tr>
+                                            <tr><td colspan="2">10026</td><td colspan="2">ADD ID LENGHT IS INCORRECT, MAX 20   </td></tr>
+                                            <tr><td colspan="2">10027</td><td colspan="2">ADD ID VALUE INCORRECT, SHOULD BE NUMERIC    </td></tr>
+                                            <tr><td colspan="2">10028</td><td colspan="2">ADD DATA FIELD COULD NOT BE EMPTY  </td></tr>
+                                            <tr><td colspan="2">10029</td><td colspan="2">ADD DATA LENGHT IS INCORRECT, MAX 50</td></tr>
+                                            <tr><td colspan="2">10030</td><td colspan="2">LABEL LENGHT IS INCORRECT, MAX 50</td></tr>
+                                            <tr><td colspan="2">10031</td><td colspan="2">NATIONAL ID FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10032</td><td colspan="2">NATIONAL ID LENGHT IS INCORRECT, MAX 30</td></tr>
+                                            <tr><td colspan="2">10033</td><td colspan="2">MOBILE NUMBER FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10034</td><td colspan="2">MOBILE NUMBER LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10035</td><td colspan="2">MOBILE NUMBER VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10036</td><td colspan="2">BRANCH CODE FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10037</td><td colspan="2">BRANCH CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10038</td><td colspan="2">BRANCH CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10039</td><td colspan="2">CUSTOMER CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10040</td><td colspan="2">CUSTOMER CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10041</td><td colspan="2">CUSTOMER CODE FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10042</td><td colspan="2">ACCOUNT FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10043</td><td colspan="2">ACCOUNT LENGHT IS INCORRECT, MAX 24</td></tr>
+                                            <tr><td colspan="2">10044</td><td colspan="2">ACCOUNT VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10045</td><td colspan="2">ACCOUNT PROGRAM CODE FIELD COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10046</td><td colspan="2">ACCOUNT PROGRAM CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10047</td><td colspan="2">ACCOUNT PROGRAM CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10048</td><td colspan="2">DATE FIELD COULD NOT BE EMPTY, FORMAT </td></tr>
+                                            <tr><td colspan="2">10049</td><td colspan="2">DATE FIELD LENGHT IS INCORRECT, FORMAT </td></tr>
+                                            <tr><td colspan="2">10050</td><td colspan="2">DATE FIELD VALUE IS INCORRECT, FORMAT </td></tr>
+                                            <tr><td colspan="2">10053</td><td colspan="2">ENGLISH FIRST NAME COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10054</td><td colspan="2">ENGLISH FIRST NAME LENGHT IS INCORRECT, MAX 40</td></tr>
+                                            <tr><td colspan="2">10055</td><td colspan="2">ENGLISH LAST NAME COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10056</td><td colspan="2">ENGLISH LAST NAME LENGHT IS INCORRECT, MAX 40</td></tr>
+                                            <tr><td colspan="2">10057</td><td colspan="2">ARABIC FIRST NAME COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10058</td><td colspan="2">ARABIC FIRST NAME LENGHT IS INCORRECT, MAX 40</td></tr>
+                                            <tr><td colspan="2">10059</td><td colspan="2">ARABIC LAST NAME COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10060</td><td colspan="2">ARABIC LAST NAME LENGHT IS INCORRECT, MAX 40</td></tr>
+                                            <tr><td colspan="2">10061</td><td colspan="2">GENDER VALUE INCORRECT, SHOULD BE 'M' OR 'F'</td></tr>
+                                            <tr><td colspan="2">10062</td><td colspan="2">TITEL VALUE INCORRECT, SHOULD BE NUMERIC WITH ONE OF VALUES '1'=Mr,'2'=Mrs OR '3'=Miss</td></tr>
+                                            <tr><td colspan="2">10064</td><td colspan="2">PLACE OF BIRTH LENGHT IS INCORRECT, MAX 15</td></tr>
+                                            <tr><td colspan="2">10065</td><td colspan="2">NATIONALITY LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10066</td><td colspan="2">EMAIL ADR LENGHT IS INCORRECT, MAX 128</td></tr>
+                                            <tr><td colspan="2">10067</td><td colspan="2">EMAIL VALUE IS INCORRECT</td></tr>
+                                            <tr><td colspan="2">10069</td><td colspan="2">PASSPORT ID LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10070</td><td colspan="2">ADDRESS TYPE COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10071</td><td colspan="2">ADDRESS TYPE IS INCORRECT, SHOULD BE NUMERIC WITH POSSIBLE VALUES (01 , 02 , 03 , 04, 05 OR 06)</td></tr>
+                                            <tr><td colspan="2">10072</td><td colspan="2">ADDRESS TYPE IS INCORRECT, SHOULD BE NUMERIC WITH POSSIBLE VALUES (01 , 02 , 03 , 04, 05 OR 06)</td></tr>
+                                            <tr><td colspan="2">10073</td><td colspan="2">ADDRESS CORRESPONDENCE COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10074</td><td colspan="2">ADDRESS CORRESPONDENCE IS INCORRECT, SHOULD BE NUMERIC WITH POSSIBLE VALUES (01 , 02 , 03 , 04, 05 OR 06)</td></tr>
+                                            <tr><td colspan="2">10075</td><td colspan="2">ADDRESS CORRESPONDENCE IS INCORRECT, SHOULD BE NUMERIC WITH POSSIBLE VALUES (01 , 02 , 03 , 04, 05 OR 06)</td></tr>
+                                            <tr><td colspan="2">10076</td><td colspan="2">ADDRESS A COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10077</td><td colspan="2">ADDRESS A LENGHT IS INCORRECT, MAX 80</td></tr>
+                                            <tr><td colspan="2">10078</td><td colspan="2">ADDRESS B LENGHT IS INCORRECT, MAX 80</td></tr>
+                                            <tr><td colspan="2">10079</td><td colspan="2">ADDRESS STREET LENGHT IS INCORRECT, MAX 40</td></tr>
+                                            <tr><td colspan="2">10080</td><td colspan="2">ZIP CODE ADDRESS LENGHT IS INCORRECT, MAX 5</td></tr>
+                                            <tr><td colspan="2">10081</td><td colspan="2">CITY CODE ADDRESS LENGHT IS INCORRECT, MAX 10</td></tr>
+                                            <tr><td colspan="2">10082</td><td colspan="2">POSTAL CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10083</td><td colspan="2">COUNTRY CODE LENGHT IS INCORRECT, MAX 10</td></tr>
+                                            <tr><td colspan="2">10084</td><td colspan="2">COUNTRY CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10085</td><td colspan="2">POSTAL CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10086</td><td colspan="2">CITY CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10087</td><td colspan="2">ZIP CODE ADDRESS VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10088</td><td colspan="2">ADDRESS COUNT INCORRECT, AT LEAST ONE ADDRESS SHOULD BE FILLED</td></tr>
+                                            <tr><td colspan="2">10089</td><td colspan="2">MERCHANT ID LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10090</td><td colspan="2">MERCHANT NAME COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10091</td><td colspan="2">MERCHANT NAME LENGHT IS INCORRECT, MAX 40</td></tr>
+                                            <tr><td colspan="2">10092</td><td colspan="2">MERCHANT ACTIVITY CODE COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10093</td><td colspan="2">MERCHANT ACTIVITY CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10094</td><td colspan="2">MERCHANT ACTIVITY CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10095</td><td colspan="2">MERCHANT PROGRAM CODE COULD NOT BE EMPTY</td></tr>
+                                            <tr><td colspan="2">10096</td><td colspan="2">MERCHANT PROGRAM CODE LENGHT IS INCORRECT, MAX 20</td></tr>
+                                            <tr><td colspan="2">10097</td><td colspan="2">MERCHANT PROGRAM CODE VALUE INCORRECT, SHOULD BE NUMERIC</td></tr>
+                                            <tr><td colspan="2">10098</td><td colspan="2">HEADER ENTITY NOT FOUND</td></tr>
+                                            <tr><td colspan="2">10099</td><td colspan="2">DATA ENTITY NOT FOUND</td></tr>
+                                            <tr><td colspan="2">10100</td><td colspan="2">INITIATOR ENTITY NOT FOUND</td></tr>
+                                            <tr><td colspan="2">10101</td><td colspan="2">IDENTITY ENTITY NOT FOUND</td></tr>
+                                            <tr><td colspan="2">10102</td><td colspan="2">CRITERIA ENTITY NOT FOUND</td></tr>
+                                            <tr><td colspan="2">10103</td><td colspan="2">FILTER ENTITY NOT FOUND</td></tr>
+                                            <tr><td colspan="2">10104</td><td colspan="2">REQUEST ENTITY NOT FOUND </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingGeneral">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseGeneral" aria-expanded="false" aria-controls="collapseGeneral">
+                                        General Errors, (2xxxx) List
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseGeneral" class="collapse" aria-labelledby="headingGeneral" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <tbody>
+                                            <tr>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Code</th>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Description</th>
+                                            </tr>
+                                            <tr><td colspan="2">20000</td><td colspan="2">INCORRECT AUTHENTIFICATION REQ: dtls</td></tr>
+                                            <tr><td colspan="2">20001</td><td colspan="2">INCORRECT INPUT: dtls</td></tr>
+                                            <tr><td colspan="2">20002</td><td colspan="2">PROCESSING ERROR: dtls</td></tr>
+                                            <tr><td colspan="2">20003</td><td colspan="2">OTHER ERROR: dtls</td></tr>
+                                            <tr><td colspan="2">20004</td><td colspan="2">ERROR GET DATA: dtls</td></tr>
+                                            <tr><td colspan="2">20005</td><td colspan="2">ERROR PARSING: dtls</td></tr>
+                                            <tr><td colspan="2">20006</td><td colspan="2">ERROR STREAM: dtls</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingOther">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOther" aria-expanded="false" aria-controls="collapseOther">
+                                        Other Errors, (8xxxx) List
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOther" class="collapse" aria-labelledby="headingOther" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <tbody>
+                                            <tr>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Code</th>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Description</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">80000</td>
+                                                <td colspan="2">Unknown Error: dtls</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">80001</td>
+                                                <td colspan="2">SQL Error: dtls</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">80002</td>
+                                                <td colspan="2">Trace: dtls</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>					
+                        <div class="card bg-success">
+                            <div class="card-header" id="headingInternal">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseInternal" aria-expanded="false" aria-controls="collapseInternal">
+                                        Internal Errors, (9xxxx) List
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseInternal" class="collapse" aria-labelledby="headingInternal" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-dark">
+                                        <tbody>
+                                            <tr>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Code</th>
+                                                <th  style="vertical-align : middle;text-align:left; font-size: 14px;" colspan="2" scope="row">Description</th>
+                                            </tr>
+                                            <tr><td colspan="2">90000</td><td colspan="2">Error check Customer</td></tr>
+                                            <tr><td colspan="2">90001</td><td colspan="2">Invalid Wallet card program</td></tr>
+                                            <tr><td colspan="2">90002</td><td colspan="2">Error  Wallet Number generation</td></tr>
+                                            <tr><td colspan="2">90003</td><td colspan="2">Exception Risk Limit</td></tr>
+                                            <tr><td colspan="2">90004</td><td colspan="2">Exception Risk Limit Details</td></tr>
+                                            <tr><td colspan="2">90005</td><td colspan="2">Invalid  address type</td></tr>
+                                            <tr><td colspan="2">90006</td><td colspan="2">Invalid  address correspondence</td></tr>
+                                            <tr><td colspan="2">90007</td><td colspan="2">walletinfoupdate Exception</td></tr>
+                                            <tr><td colspan="2">90008</td><td colspan="2">can not get Entity Data</td></tr>
+                                            <tr><td colspan="2">90009</td><td colspan="2">Merchant does not exist</td></tr>
+                                            <tr><td colspan="2">90010</td><td colspan="2">Action not permitted, this entity is already cancelled</td></tr>
+                                            <tr><td colspan="2">90011</td><td colspan="2">Action not permitted, this entity is cancelled</td></tr>
+                                            <tr><td colspan="2">90012</td><td colspan="2">Invalid Status</td></tr>
+                                            <tr><td colspan="2">90013</td><td colspan="2">updateentitystatus Exception</td></tr>
+                                            <tr><td colspan="2">90014</td><td colspan="2">the mxp account is linked to other entities</td></tr>
+                                            <tr><td colspan="2">90015</td><td colspan="2">error to check entity</td></tr>
+                                            <tr><td colspan="2">90016</td><td colspan="2">payoff Exception</td></tr>
+                                            <tr><td colspan="2">90017</td><td colspan="2">writeoff Exception</td></tr>
+                                            <tr><td colspan="2">90018</td><td colspan="2">getcustomerentitylist Exception</td></tr>
+                                            <tr><td colspan="2">90019</td><td colspan="2">getcustomerentitybalance Exception</td></tr>
+                                            <tr><td colspan="2">90020</td><td colspan="2">getmnoslist Exception</td></tr>
+                                            <tr><td colspan="2">90021</td><td colspan="2">getmnosdenomination Exception</td></tr>
+                                            <tr><td colspan="2">90022</td><td colspan="2">Error check Wallet Data</td></tr>
+                                            <tr><td colspan="2">90023</td><td colspan="2">getentitylimits Exception</td></tr>
+                                            <tr><td colspan="2">90024</td><td colspan="2">searchtransactions Exception</td></tr>
+                                            <tr><td colspan="2">90025</td><td colspan="2">acceptpayment Exception</td></tr>
+                                            <tr><td colspan="2">90026</td><td colspan="2">purchasebulkvoucher Exception</td></tr>
+                                            <tr><td colspan="2">90027</td><td colspan="2">Invalid Destination Entity</td></tr>
+                                            <tr><td colspan="2">90028</td><td colspan="2">Invalid Source Entity</td></tr>
+                                            <tr><td colspan="2">90029</td><td colspan="2">can not get Source Entity</td></tr>
+                                            <tr><td colspan="2">90030</td><td colspan="2">can not get Destination Entity</td></tr>
+                                            <tr><td colspan="2">90031</td><td colspan="2">moneytransfer Exception</td></tr>
+                                            <tr><td colspan="2">90032</td><td colspan="2">debittransaction Exception</td></tr>
+                                            <tr><td colspan="2">90033</td><td colspan="2">credittransaction Exception</td></tr>
+                                            <tr><td colspan="2">90034</td><td colspan="2">getAccountPrograms Exception</td></tr>
+                                            <tr><td colspan="2">90035</td><td colspan="2">checkcustomerinfo Exception</td></tr>
+                                            <tr><td colspan="2">90036</td><td colspan="2">getBanks Exception</td></tr>
+                                            <tr><td colspan="2">90037</td><td colspan="2">getBranchs Exception</td></tr>
+                                            <tr><td colspan="2">90038</td><td colspan="2">getCities Exception</td></tr>
+                                            <tr><td colspan="2">90039</td><td colspan="2">getCountries Exception</td></tr>
+                                            <tr><td colspan="2">90040</td><td colspan="2">ChangeWalletAccountProgram Exception</td></tr>
+                                            <tr><td colspan="2">90041</td><td colspan="2">getmerchantprograms Exception</td></tr>
+                                            <tr><td colspan="2">90042</td><td colspan="2">checkmerchantinfo1 Exception</td></tr>
+                                            <tr><td colspan="2">90043</td><td colspan="2">purchasevoucher Exception</td></tr>
+                                            <tr><td colspan="2">90044</td><td colspan="2">ownerinfoupdate Exception</td></tr>
+                                            <tr><td colspan="2">90045</td><td colspan="2">Error get transaction currency</td></tr>
+                                            <tr><td colspan="2">90046</td><td colspan="2">Error run controls</td></tr>
+                                            <tr><td colspan="2">90047</td><td colspan="2">Error Control Availability</td></tr>
+                                            <tr><td colspan="2">90048</td><td colspan="2">Error Control Fraud</td></tr>
+                                            <tr><td colspan="2">90049</td><td colspan="2">Error update activity</td></tr>
+                                            <tr><td colspan="2">90050</td><td colspan="2">Error update account availabale</td></tr>
+                                            <tr><td colspan="2">90051</td><td colspan="2">Error update Merchant Account balance</td></tr>
+                                            <tr><td colspan="2">90052</td><td colspan="2">Error Insert Authorization</td></tr>
+                                            <tr><td colspan="2">90053</td><td colspan="2">Error get denomination</td></tr>
+                                            <tr><td colspan="2">90054</td><td colspan="2">Merchant/MNO Exception List</td></tr>
+                                            <tr><td colspan="2">90055</td><td colspan="2">NO Data Found</td></tr>
+                                            <tr><td colspan="2">90056</td><td colspan="2">Error Get Evoucher BULK PIN</td></tr>
+                                            <tr><td colspan="2">90057</td><td colspan="2">RequestID is required</td></tr>
+                                            <tr><td colspan="2">90058</td><td colspan="2">customer info is required</td></tr>
+                                            <tr><td colspan="2">90059</td><td colspan="2">Error get currency</td></tr>
+                                            <tr><td colspan="2">90060</td><td colspan="2">Error control Data</td></tr>
+                                            <tr><td colspan="2">90061</td><td colspan="2">customer first name is required</td></tr>
+                                            <tr><td colspan="2">90062</td><td colspan="2">Interbank Transfer Not Allowed</td></tr>
+                                            <tr><td colspan="2">90063</td><td colspan="2">error setup msrt general ledger account</td></tr>
+                                            <tr><td colspan="2">90064</td><td colspan="2">Error DEBIT BANK account</td></tr>
+                                            <tr><td colspan="2">90065</td><td colspan="2">Error update destination Account balance</td></tr>
+                                            <tr><td colspan="2">90066</td><td colspan="2">Error CREDIT BANK ACCOUNT</td></tr>
+                                            <tr><td colspan="2">90067</td><td colspan="2">Request Initiator Invalid</td></tr>
+                                            <tr><td colspan="2">90068</td><td colspan="2">Entity Balance is negative</td></tr>
+                                            <tr><td colspan="2">90069</td><td colspan="2">Error Update Account</td></tr>
+                                            <tr><td colspan="2">90070</td><td colspan="2">Error Cancel Entity</td></tr>
+                                            <tr><td colspan="2">90071</td><td colspan="2">Error get Entity Data</td></tr>
+                                            <tr><td colspan="2">90072</td><td colspan="2">Error Insert Transaction</td></tr>
+                                            <tr><td colspan="2">90073</td><td colspan="2">Error Update Account</td></tr>
+                                            <tr><td colspan="2">90074</td><td colspan="2">Error Cancel Entity</td></tr>
+                                            <tr><td colspan="2">90075</td><td colspan="2">ADDRESS DOES NOT EXIST</td></tr>
+                                            <tr><td colspan="2">90076</td><td colspan="2">WALLET DOES NOT EXIST</td></tr>
+                                            <tr><td colspan="2">90077</td><td colspan="2">THIS WALLET HAVE NOT AN ACCOUNT</td></tr>
+                                            <tr><td colspan="2">90078</td><td colspan="2">Invalid Account program</td></tr>
+                                            <tr><td colspan="2">90079</td><td colspan="2">No account with this program is linked to this customer</td></tr>
+                                            <tr><td colspan="2">90080</td><td colspan="2">can not generate shadow account</td></tr>
+                                            <tr><td colspan="2">90081</td><td colspan="2">PHONE NUMBER DOES NOT MUTCH</td></tr>
+                                            <tr><td colspan="2">90082</td><td colspan="2">EVoucher Not Available</td></tr>
+                                            <tr><td colspan="2">90083</td><td colspan="2">Error Get Evoucher PIN</td></tr>
+                                            <tr><td colspan="2">90084</td><td colspan="2">Error check Merchant</td></tr>
+                                            <tr><td colspan="2">90085</td><td colspan="2">Invalid Adresse Type</td></tr>
+                                            <tr><td colspan="2">90086</td><td colspan="2">Error insert currency</td></tr>
+                                            <tr><td colspan="2">90087</td><td colspan="2">Error insert merchant owner</td></tr>
+                                            <tr><td colspan="2">90088</td><td colspan="2">Error insert merchant system</td></tr>
+                                            <tr><td colspan="2">90089</td><td colspan="2">Error insert account</td></tr>
+                                            <tr><td colspan="2">90090</td><td colspan="2">Bank host Response: </td></tr>
+                                            <tr><td colspan="2">90091</td><td colspan="2">Invalid Account program</td></tr>
+                                            <tr><td colspan="2">90092</td><td colspan="2">Error create  Wallet</td></tr>
+                                            <tr><td colspan="2">90093</td><td colspan="2">MERCHANT ALREADY ENROLLED</td></tr>
+                                            <tr><td colspan="2">90094</td><td colspan="2">Error processing registration</td></tr>
+                                            <tr><td colspan="2">90095</td><td colspan="2">error setup URL bank host connexion</td></tr>
+                                            <tr><td colspan="2">90096</td><td colspan="2">error send request to bank host</td></tr>
+                                            <tr><td colspan="2">90097</td><td colspan="2">error get bank host Response</td></tr>
+                                            <tr><td colspan="2">90098</td><td colspan="2">error processing request with bank host</td></tr>
+                                            <tr><td colspan="2">90099</td><td colspan="2">shadow Account not defined</td></tr>
+                                            <tr><td colspan="2">90100</td><td colspan="2">can not generate shadow account</td></tr>
+                                            <tr><td colspan="2">90101</td><td colspan="2">Error preparation expiration date</td></tr>
+                                            <tr><td colspan="2">90102</td><td colspan="2">Error preparation  date</td></tr>
+                                            <tr><td colspan="2">90103</td><td colspan="2">Error bin wallet</td></tr>
+                                            <tr><td colspan="2">90104</td><td colspan="2">No wallet found</td></tr>
+                                            <tr><td colspan="2">90105</td><td colspan="2">error control</td></tr>
+                                            <tr><td colspan="2">90106</td><td colspan="2">Error processing payment</td></tr>
+                                            <tr><td colspan="2">90107</td><td colspan="2">Error Processing purchase bulk evoucher</td></tr>
+                                            <tr><td colspan="2">90108</td><td colspan="2">Error processing debit transaction</td></tr>
+                                            <tr><td colspan="2">90109</td><td colspan="2">Error processing credit transaction</td></tr>
+                                            <tr><td colspan="2">90110</td><td colspan="2">Error Processing Money Transfer</td></tr>
+                                            <tr><td colspan="2">90111</td><td colspan="2">Error get Transaction List</td></tr>
+                                            <tr><td colspan="2">90112</td><td colspan="2">Error process payoff</td></tr>
+                                            <tr><td colspan="2">90113</td><td colspan="2">Error process writeoff</td></tr>
+                                            <tr><td colspan="2">90114</td><td colspan="2">Error get Data</td></tr>
+                                            <tr><td colspan="2">90115</td><td colspan="2">Error control input Data </td></tr>
+                                            <tr><td colspan="2">90116</td><td colspan="2">Error Processing purchase evoucher</td></tr>
+                                            <tr><td colspan="2">90117</td><td colspan="2">customer Last name is required</td></tr>
+                                            <tr><td colspan="2">90118</td><td colspan="2">customer Gender is required</td></tr>
+                                            <tr><td colspan="2">90119</td><td colspan="2">invalid customer Gender </td></tr>
+                                            <tr><td colspan="2">90120</td><td colspan="2">customer Title is required</td></tr>
+                                            <tr><td colspan="2">90121</td><td colspan="2">invalid customer Title </td></tr>
+                                            <tr><td colspan="2">90122</td><td colspan="2">customer Mobile number is required</td></tr>
+                                            <tr><td colspan="2">90123</td><td colspan="2">customer Adress is required</td></tr>
+                                            <tr><td colspan="2">90124</td><td colspan="2">customer bank  is required</td></tr>
+                                            <tr><td colspan="2">90125</td><td colspan="2">customer Branch is required</td></tr>
+                                            <tr><td colspan="2">90126</td><td colspan="2">customer National ID is required</td></tr>
+                                            <tr><td colspan="2">90127</td><td colspan="2">Account Program is required</td></tr>
+                                            <tr><td colspan="2">90128</td><td colspan="2">Account Program does not exist</td></tr>
+                                            <tr><td colspan="2">90129</td><td colspan="2">Account Number is required</td></tr>
+                                            <tr><td colspan="2">90130</td><td colspan="2">Wallet code is required</td></tr>
+                                            <tr><td colspan="2">90131</td><td colspan="2">info to be update is required</td></tr>
+                                            <tr><td colspan="2">90132</td><td colspan="2">Entity Type is Empty</td></tr>
+                                            <tr><td colspan="2">90133</td><td colspan="2">Entity Type is required</td></tr>
+                                            <tr><td colspan="2">90134</td><td colspan="2">Entity Code is required</td></tr>
+                                            <tr><td colspan="2">90135</td><td colspan="2">New Status is required</td></tr>
+                                            <tr><td colspan="2">90136</td><td colspan="2">Entity Code is required</td></tr>
+                                            <tr><td colspan="2">90137</td><td colspan="2">Operation not allowed for This entity code</td></tr>
+                                            <tr><td colspan="2">90138</td><td colspan="2">Forced Flag is required</td></tr>
+                                            <tr><td colspan="2">90139</td><td colspan="2">Request Initiator is required</td></tr>
+                                            <tr><td colspan="2">90140</td><td colspan="2">customer Code is required</td></tr>
+                                            <tr><td colspan="2">90141</td><td colspan="2">Invalid Entity Type</td></tr>
+                                            <tr><td colspan="2">90142</td><td colspan="2">Mno code is required</td></tr>
+                                            <tr><td colspan="2">90143</td><td colspan="2">Service code is required</td></tr>
+                                            <tr><td colspan="2">90144</td><td colspan="2">Transaction Date  is required</td></tr>
+                                            <tr><td colspan="2">90145</td><td colspan="2">Transaction Context is required</td></tr>
+                                            <tr><td colspan="2">90146</td><td colspan="2">Invalid Transaction Context</td></tr>
+                                            <tr><td colspan="2">90147</td><td colspan="2">Merchant ID is required</td></tr>
+                                            <tr><td colspan="2">90148</td><td colspan="2">Operation Amount is required</td></tr>
+                                            <tr><td colspan="2">90149</td><td colspan="2">Currency Code is required</td></tr>
+                                            <tr><td colspan="2">90150</td><td colspan="2">Denomination Code is required</td></tr>
+                                            <tr><td colspan="2">90151</td><td colspan="2">quantity of voucher  is required</td></tr>
+                                            <tr><td colspan="2">90152</td><td colspan="2">Terminal Type is required</td></tr>
+                                            <tr><td colspan="2">90153</td><td colspan="2">Invalid Terminal Type </td></tr>
+                                            <tr><td colspan="2">90154</td><td colspan="2">Terminal Code is required</td></tr>
+                                            <tr><td colspan="2">90155</td><td colspan="2">Source Entity Code  is required</td></tr>
+                                            <tr><td colspan="2">90156</td><td colspan="2">Source Entity Type is required</td></tr>
+                                            <tr><td colspan="2">90157</td><td colspan="2">Invalid Source Entity Type</td></tr>
+                                            <tr><td colspan="2">90158</td><td colspan="2">Destination Entity Code  is required</td></tr>
+                                            <tr><td colspan="2">90159</td><td colspan="2">Destination Entity Type is required</td></tr>
+                                            <tr><td colspan="2">90160</td><td colspan="2">Invalid Destination Entity Type</td></tr>
+                                            <tr><td colspan="2">90161</td><td colspan="2">Invalid Operation</td></tr>
+                                            <tr><td colspan="2">90162</td><td colspan="2">Amount is required</td></tr>
+                                            <tr><td colspan="2">90163</td><td colspan="2">currency is required</td></tr>
+                                            <tr><td colspan="2">90164</td><td colspan="2">Error get Data</td></tr>
+                                            <tr><td colspan="2">90165</td><td colspan="2">National Id is required</td></tr>
+                                            <tr><td colspan="2">90166</td><td colspan="2">Bank Code is required</td></tr>
+                                            <tr><td colspan="2">90167</td><td colspan="2">Merchant info is required</td></tr>
+                                            <tr><td colspan="2">90168</td><td colspan="2">merchant name is required</td></tr>
+                                            <tr><td colspan="2">90169</td><td colspan="2">Merchant Owner First Name is required</td></tr>
+                                            <tr><td colspan="2">90170</td><td colspan="2">Merchant Owner Last Name is required</td></tr>
+                                            <tr><td colspan="2">90171</td><td colspan="2">Merchant Owner Gender is required</td></tr>
+                                            <tr><td colspan="2">90172</td><td colspan="2">Merchant Owner Title is required</td></tr>
+                                            <tr><td colspan="2">90173</td><td colspan="2">Merchant phone number is required</td></tr>
+                                            <tr><td colspan="2">90174</td><td colspan="2">Merchant Branch code is required</td></tr>
+                                            <tr><td colspan="2">90175</td><td colspan="2">Merchant Bank code is required</td></tr>
+                                            <tr><td colspan="2">90176</td><td colspan="2">Merchant National ID is required</td></tr>
+                                            <tr><td colspan="2">90177</td><td colspan="2">Merchant Account Number is required</td></tr>
+                                            <tr><td colspan="2">90178</td><td colspan="2">Merchant Program Code is required</td></tr>
+                                            <tr><td colspan="2">90179</td><td colspan="2">merchant program does not exist</td></tr>
+                                            <tr><td colspan="2">90180</td><td colspan="2">Merchant Activity Code is required</td></tr>
+                                            <tr><td colspan="2">90181</td><td colspan="2">merchant activity code does not exist</td></tr>
+                                            <tr><td colspan="2">90182</td><td colspan="2">Merchant Payment Mode is required</td></tr>
+                                            <tr><td colspan="2">90183</td><td colspan="2">Sum of Merchant Payment mode Rate must be equal 100</td></tr>
+                                            <tr><td colspan="2">90184</td><td colspan="2">Wallet Account program  is required</td></tr>
+                                            <tr><td colspan="2">90185</td><td colspan="2">Wallet Account program does not exist</td></tr>
+                                            <tr><td colspan="2">90186</td><td colspan="2">New Account Program is required</td></tr>
+                                            <tr><td colspan="2">90187</td><td colspan="2">Phone Number is required</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id='rules' class='section faq-section'>
+                <div class='container' >
+                    <div class='top-section-header' >
+                        <h2>API RULES</h2>
+                        <p>Wes services format and common points</p>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>format?</h4>
+                            <p>
+                                Restful service (JSON In and Out), POST Request, Header : Content-Type: application/json.<a href="https://drive.google.com/open?id=1q0NNa0BqIIwW1TYIzPEQ4xMJV86-nMGU"  target="_blank">call sample</a>
+                            </p>
+                        </div>
+                        <div class='faq' >
+                            <h4>DATA?</h4>
+                            <p>
+                                All supported data, either input or output, are strings that meet the constraints requested and must be included in the json file (not null), even if empty
+                            </p>
+                        </div>
+                        <div class='faq' >
+                            <h4>Header?</h4>
+                            <p>
+                                All messages (request or response) are preceded by a message identification (idmsg), chosen by the sender of the message (random or with an order), and returned by the recipient (same value), used to correlate responses with requests. With constraint number fixed length 12 not null.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='col-md-6' >
+                        <div class='faq' >
+                            <h4>Response?</h4>
+                            <p>
+                                All responses must contain a status object indicating the status of the response and the description of the error in case of error.
+                            </p>
+                        </div>
+                        <div class='faq' >
+                            <h4>Keys?</h4>
+                            <p>
+                                sender key : 142DF54EF47ZE78B, recipient key : 552A15CF5889EAFF
+                            </p>
+                        </div>
+                        <div class='faq' >
+                            <h4>mac value?</h4>
+                            <p>
+                                The mac value in exchanges represents a data hash encryption whose key is shared between SS and MB during the integration phase, ensuring the sender's authenticity. (could be ignored during the preparation phase).
+                                Mac Request is ( Mac = first 16 of SHA-256(idmsg+sender key)),
+                                Mac Response is ( Mac = first 16 of SHA-256(idmsg+recipient key)).<a href="https://drive.google.com/open?id=1DTsXFS6bpNUlhw1qSceZytDpUCBPY-_c"  target="_blank">mac sample</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================================================================
+                    Footer
+            ==================================================================-->
+            <footer>
+                <div class='container text-center' >
+                    <p>Copyright S2M &copy; 2019. <a href="http://s2mworldwide.com" target="_blank">s2mworldwide</a></p>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <!--==================================================================
+                JavaScript Files
+        ==================================================================-->
+        <script src='js/jquery.min.js' ></script>
+        <script src='js/jquery.fitvids.js' ></script>
+        <script src='js/owl.carousel.min.js' ></script>
+        <script src='js/jquery.magnific-popup.min.js' ></script>
+        <script src='bootstrap/js/bootstrap.min.js' ></script>
+        <script src='js/validator.min.js' ></script>
+        <script src='js/script.js' ></script>
+    </body>
+</html>
