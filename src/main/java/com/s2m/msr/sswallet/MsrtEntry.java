@@ -1,7 +1,7 @@
 package com.s2m.msr.sswallet;
 
 /*
-* @author Hicham ELKASMI 
+* @author Hicham ELKASMI DEMO
 */
 
 import com.ssw.bnk.swint.jdbc.*;
